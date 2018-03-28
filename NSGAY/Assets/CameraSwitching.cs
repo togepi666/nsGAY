@@ -7,20 +7,24 @@ public class CameraSwitching : MonoBehaviour
 	public int CurrentMaterialIndex = 0;
 	public Renderer MainScreen, Screen2, Screen3;
 	public Material[] RenderTextureMaterial = new Material[3];
-	void Start () {
-		
+	private AudioSource _changeSound;
+
+	private void Start()
+	{
+		_changeSound = MainScreen.gameObject.GetComponent<AudioSource>();
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		if (Input.GetKeyDown(","))
 		{
 			CurrentMaterialIndex--;
+			_changeSound.PlayOneShot(_changeSound.clip);
 		}
 
 		if (Input.GetKeyDown("."))
 		{
 			CurrentMaterialIndex++;
+			_changeSound.PlayOneShot(_changeSound.clip);
 		}
 		switch (CurrentMaterialIndex)
 		{
