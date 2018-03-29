@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
+<<<<<<< HEAD
     <e p="C:\Users\pokko\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_NSGAY.926724995.00" t="ExcludeRecursive" />
     <e p="C:\Users\pokko\OneDrive\NYU\2017-2018\Intermediate Game Development\Int-Dev_Final\NSGAY" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="girlAI.cs" t="Include" />
+=======
+    <e p="C:\Users\Edgar\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_NSGAY.2087052464.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Edgar\Documents\nsGAY\nsGAY" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="CameraSwitching.cs" t="Include" />
+        <e p="EnemyBehavior.cs" t="Include" />
+>>>>>>> 0d3b8ab390ffe78c108f88e5d132aaf0d6a4e13c
         <e p="Plugins" t="Include">
           <e p="Editor" t="Include">
             <e p="JetBrains" t="Include">
