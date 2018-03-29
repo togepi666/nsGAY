@@ -11,11 +11,12 @@ public class Shooting : MonoBehaviour {
 
     void Start()
     {
-        hit = new RaycastHit();
+       // hit = new RaycastHit();
     }
 
     void Update()
     {
+        RaycastHit hit;
         Vector3 startPoint = new Vector3(0, 0, 0);
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -26,7 +27,7 @@ public class Shooting : MonoBehaviour {
             {
                 Debug.DrawLine(ray.origin, hit.point, Color.red);
 
-                GameObject newBullet = Instantiate(bullet, gun.transform.position, gun.transform.rotation) as GameObject;
+                GameObject newBullet = Instantiate(bullet, transform.position, transform.rotation) as GameObject;
                 newBullet.GetComponent<Rigidbody>().velocity = (hit.point - transform.position).normalized * speed;
             }
         }
