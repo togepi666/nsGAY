@@ -13,12 +13,12 @@ public class CameraSwitching : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(","))
+		if (Input.GetKeyDown(",") || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
 		{
 			CurrentMaterialIndex--;
 		}
 
-		if (Input.GetKeyDown("."))
+		if (Input.GetKeyDown(".") || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
 		{
 			CurrentMaterialIndex++;
 		}
