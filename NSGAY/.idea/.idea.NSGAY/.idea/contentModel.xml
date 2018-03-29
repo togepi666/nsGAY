@@ -8,6 +8,7 @@
       <e p="Assets" t="Include">
         <e p="CameraSwitching.cs" t="Include" />
         <e p="EnemyBehavior.cs" t="Include" />
+        <e p="GeneralThings.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="Editor" t="Include">
             <e p="JetBrains" t="Include">
