@@ -7,7 +7,8 @@ public class Shooting : MonoBehaviour {
     public GameObject bullet;
     public float speed = 50;
     RaycastHit hit;
-    public GameObject gun;
+    public int designatedCamera;
+    public Camera cameraObject;
 
     void Start()
     {
@@ -18,18 +19,28 @@ public class Shooting : MonoBehaviour {
     {
         RaycastHit hit;
         Vector3 startPoint = new Vector3(0, 0, 0);
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray = cameraObject.ScreenPointToRay(Input.mousePosition);
+       
 
-        if (Input.GetMouseButtonDown(0))
+        if (GameObject.Find("Controller").GetComponent<CameraSwitching>().CurrentMaterialIndex == designatedCamera)
         {
-            
-            if (Physics.Raycast(ray, out hit, 400.0f))
+            if (Input.GetMouseButtonDown(0))
             {
-                Debug.DrawLine(ray.origin, hit.point, Color.red);
 
-                GameObject newBullet = Instantiate(bullet, transform.position, transform.rotation) as GameObject;
-                newBullet.GetComponent<Rigidbody>().velocity = (hit.point - transform.position).normalized * speed;
+                if (Physics.Raycast(ray, out hit, 400.0f))
+                {
+                    Debug.DrawLine(ray.origin, hit.point, Color.red);
+
+                    GameObject newBullet = Instantiate(bullet, cameraObject.transform.position, cameraObject.transform.rotation) as GameObject;
+                    newBullet.GetComponent<Rigidbody>().velocity = (hit.point - transform.position).normalized * speed;
+                }
             }
         }
+
     }
+
+   // void OnCollisionEnter(Collision collision)
+   // {
+   //     Destroy(newBullet);
+   // }
 }
