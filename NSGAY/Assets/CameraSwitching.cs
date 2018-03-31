@@ -15,13 +15,13 @@ public class CameraSwitching : MonoBehaviour
 	}
 
 	void Update () {
-		if (Input.GetKeyDown(","))
+		if (Input.GetKeyDown(",") || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
 		{
 			CurrentMaterialIndex--;
 			_changeSound.PlayOneShot(_changeSound.clip);
 		}
 
-		if (Input.GetKeyDown("."))
+		if (Input.GetKeyDown(".") || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
 		{
 			CurrentMaterialIndex++;
 			_changeSound.PlayOneShot(_changeSound.clip);
