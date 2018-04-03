@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -648,7 +648,8 @@ GameObject:
   - component: {fileID: 615729560}
   - component: {fileID: 615729559}
   - component: {fileID: 615729558}
-  m_Layer: 0
+  - component: {fileID: 615729562}
+  m_Layer: 8
   m_Name: compCam
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -718,6 +719,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
+--- !u!65 &615729562
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 615729557}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 14, y: 14, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &653063190
 GameObject:
   m_ObjectHideFlags: 0
@@ -983,7 +996,8 @@ GameObject:
   - component: {fileID: 847170939}
   - component: {fileID: 847170938}
   - component: {fileID: 847170937}
-  m_Layer: 0
+  - component: {fileID: 847170940}
+  m_Layer: 10
   m_Name: echoCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1053,6 +1067,18 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!65 &847170940
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 847170935}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12, y: 12, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &988082725
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,7 +1090,8 @@ GameObject:
   - component: {fileID: 988082729}
   - component: {fileID: 988082728}
   - component: {fileID: 988082727}
-  m_Layer: 0
+  - component: {fileID: 988082730}
+  m_Layer: 9
   m_Name: phoneCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1134,6 +1161,18 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!65 &988082730
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 988082725}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 12, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1046424211
 Prefab:
   m_ObjectHideFlags: 0
