@@ -11,6 +11,8 @@ public class EnemyBehavior : MonoBehaviour
 	public bool alive = true;
 
 	public float speed = 0;
+
+	public float currentTime = 0;
 	// Use this for initialization
 	void Start () {
 		mainCharacter = GameObject.Find("Girl");
@@ -22,13 +24,20 @@ public class EnemyBehavior : MonoBehaviour
 	{
 		if (alive)
 		{
-			transform.position = Vector3.MoveTowards(transform.position, mainCharacter.transform.position, 0.05f * speed);
+			transform.LookAt(mainCharacter.transform);
+			transform.position = Vector3.MoveTowards(transform.position, mainCharacter.transform.position, 0.03f * speed);
+			transform.position = new Vector3(transform.position.x +Mathf.Sin(Time.time*2) *.1f, transform.position.y+Mathf.Sin(Time.time*2) *.1f,transform.position.z);
+				
 		}
-	}
+		else
+		{
+			currentTime += Time.deltaTime;
+			if (currentTime > 4)
+			{
+				Destroy(gameObject);
+			}
 
-	void OnMouseClick()
-	{
-		Destroy(gameObject);
+		}
 	}
 
 	private void OnCollisionEnter(Collision other)

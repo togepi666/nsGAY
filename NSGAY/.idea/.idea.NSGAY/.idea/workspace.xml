@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="d9a1311f-06dc-42aa-8c19-44d703d6502a" name="Default" comment="" />
+=======
     <list default="true" id="d5f2dbe2-bce6-4dd8-b415-e2e09f30c1b4" name="Default" comment="" />
+>>>>>>> 0d3b8ab390ffe78c108f88e5d132aaf0d6a4e13c
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,6 +14,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
+    <leaf>
+      <file leaf-file-name="girlAI.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/girlAI.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="580">
+              <caret line="23" column="43" lean-forward="false" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+              <folding>
+                <marker date="1522334964558" expanded="false" signature="6:104" ph="..." />
+                <marker date="1522334964558" expanded="true" signature="141:699" ph="{...}" />
+                <marker date="1522334964558" expanded="true" signature="266:294" ph="{...}" />
+                <marker date="1522334964558" expanded="true" signature="348:541" ph="{...}" />
+                <marker date="1522334964558" expanded="true" signature="581:697" ph="{...}" />
+                <marker date="1522334964558" expanded="true" signature="607:694" ph="{...}" />
+=======
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file leaf-file-name="EnemyBehavior.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/EnemyBehavior.cs">
@@ -37,6 +56,7 @@
                 <marker date="1522165918948" expanded="true" signature="232:239" ph="{...}" />
                 <marker date="1522165918948" expanded="true" signature="293:404" ph="{...}" />
                 <marker date="1522165918948" expanded="true" signature="426:455" ph="{...}" />
+<<<<<<< HEAD
 >>>>>>> da79bfb30c501b0e8163c6432283a1e5be961c97
 =======
             <state relative-caret-position="644">
@@ -68,6 +88,9 @@
                 <marker date="1522339570497" expanded="true" signature="547:877" ph="{...}" />
                 <marker date="1522339570497" expanded="true" signature="568:874" ph="{...}" />
 >>>>>>> ac5d21bc17a691ac338b814a0cfae8592835e37b
+=======
+>>>>>>> 0d3b8ab390ffe78c108f88e5d132aaf0d6a4e13c
+>>>>>>> Noah_Environment-Models
               </folding>
             </state>
           </provider>
@@ -76,15 +99,29 @@
     </leaf>
   </component>
   <component name="HighlightingSettingsPerFile">
+<<<<<<< HEAD
     <setting file="file://$PROJECT_DIR$/Assets/GeneralThings.cs" root0="FORCE_HIGHLIGHTING" />
+=======
+<<<<<<< HEAD
+    <setting file="file://$PROJECT_DIR$/Assets/girlAI.cs" root0="SKIP_HIGHLIGHTING" />
+=======
+>>>>>>> Noah_Environment-Models
     <setting file="file://$PROJECT_DIR$/Assets/EnemyBehavior.cs" root0="FORCE_HIGHLIGHTING" />
+>>>>>>> 0d3b8ab390ffe78c108f88e5d132aaf0d6a4e13c
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/Assets/girlAI.cs" />
+=======
         <option value="$PROJECT_DIR$/Assets/CameraSwitching.cs" />
         <option value="$PROJECT_DIR$/Assets/EnemyBehavior.cs" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/Assets/GeneralThings.cs" />
+=======
+>>>>>>> 0d3b8ab390ffe78c108f88e5d132aaf0d6a4e13c
+>>>>>>> Noah_Environment-Models
       </list>
     </option>
   </component>
@@ -94,11 +131,23 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+<<<<<<< HEAD
   <component name="ProjectFrameBounds" extendedState="6">
+=======
+<<<<<<< HEAD
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-3" />
+    <option name="y" value="-41" />
+    <option name="width" value="1390" />
+    <option name="height" value="1755" />
+=======
+  <component name="ProjectFrameBounds" extendedState="7">
+>>>>>>> Noah_Environment-Models
     <option name="x" value="93" />
     <option name="y" value="147" />
     <option name="width" value="1632" />
     <option name="height" value="711" />
+>>>>>>> 0d3b8ab390ffe78c108f88e5d132aaf0d6a4e13c
   </component>
   <component name="ProjectView">
     <navigator currentView="SolutionExplorer" proportions="" version="1">
@@ -157,6 +206,14 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
+      <changelist id="d9a1311f-06dc-42aa-8c19-44d703d6502a" name="Default" comment="" />
+      <created>1522334348662</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1522334348662</updated>
+      <workItem from="1522334357868" duration="621000" />
+=======
       <changelist id="d5f2dbe2-bce6-4dd8-b415-e2e09f30c1b4" name="Default" comment="" />
       <created>1522161938361</created>
       <option name="number" value="Default" />
@@ -169,14 +226,19 @@
 =======
       <workItem from="1522164307416" duration="825000" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> da79bfb30c501b0e8163c6432283a1e5be961c97
 =======
       <workItem from="1522339484994" duration="748000" />
 >>>>>>> ac5d21bc17a691ac338b814a0cfae8592835e37b
+=======
+>>>>>>> 0d3b8ab390ffe78c108f88e5d132aaf0d6a4e13c
+>>>>>>> Noah_Environment-Models
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <option name="totallyTimeSpent" value="1615000" />
@@ -186,6 +248,12 @@
 =======
     <option name="totallyTimeSpent" value="2992000" />
 >>>>>>> ac5d21bc17a691ac338b814a0cfae8592835e37b
+=======
+    <option name="totallyTimeSpent" value="621000" />
+=======
+    <option name="totallyTimeSpent" value="2244000" />
+>>>>>>> 0d3b8ab390ffe78c108f88e5d132aaf0d6a4e13c
+>>>>>>> Noah_Environment-Models
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -197,7 +265,35 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+=======
+<<<<<<< HEAD
+    <frame x="-13" y="-13" width="2762" height="1770" extended-state="6" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+=======
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+>>>>>>> Noah_Environment-Models
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -220,6 +316,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+>>>>>>> 0d3b8ab390ffe78c108f88e5d132aaf0d6a4e13c
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -234,6 +331,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Assets/CameraSwitching.cs">
@@ -287,6 +385,19 @@
             <marker date="1522194065067" expanded="true" signature="1239:1276" ph="{...}" />
             <marker date="1522194065067" expanded="true" signature="1310:1347" ph="{...}" />
 =======
+    <entry file="file://$PROJECT_DIR$/Assets/girlAI.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="23" column="43" lean-forward="false" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+          <folding>
+            <marker date="1522334964558" expanded="false" signature="6:104" ph="..." />
+            <marker date="1522334964558" expanded="true" signature="141:699" ph="{...}" />
+            <marker date="1522334964558" expanded="true" signature="266:294" ph="{...}" />
+            <marker date="1522334964558" expanded="true" signature="348:541" ph="{...}" />
+            <marker date="1522334964558" expanded="true" signature="581:697" ph="{...}" />
+            <marker date="1522334964558" expanded="true" signature="607:694" ph="{...}" />
+>>>>>>> Noah_Environment-Models
+=======
     <entry file="file://$PROJECT_DIR$/Assets/CameraSwitching.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/CameraSwitching.cs" />
 =======
@@ -302,6 +413,7 @@
             <marker date="1522165918948" expanded="true" signature="232:239" ph="{...}" />
             <marker date="1522165918948" expanded="true" signature="293:404" ph="{...}" />
             <marker date="1522165918948" expanded="true" signature="426:455" ph="{...}" />
+<<<<<<< HEAD
 >>>>>>> da79bfb30c501b0e8163c6432283a1e5be961c97
 =======
             <marker date="1522339544548" expanded="false" signature="6:104" ph="..." />
@@ -347,6 +459,9 @@
             <marker date="1522339544548" expanded="true" signature="699:824" ph="{...}" />
             <marker date="1522339544548" expanded="true" signature="747:821" ph="{...}" />
 >>>>>>> ac5d21bc17a691ac338b814a0cfae8592835e37b
+=======
+>>>>>>> 0d3b8ab390ffe78c108f88e5d132aaf0d6a4e13c
+>>>>>>> Noah_Environment-Models
           </folding>
         </state>
       </provider>
