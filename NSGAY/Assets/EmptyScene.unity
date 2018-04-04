@@ -726,11 +726,11 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 615729557}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 14, y: 14, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 9, y: 25.345943, z: 0}
+  m_Center: {x: 0, y: 4.04265, z: 0}
 --- !u!1 &653063190
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,7 +995,6 @@ GameObject:
   - component: {fileID: 847170936}
   - component: {fileID: 847170939}
   - component: {fileID: 847170938}
-  - component: {fileID: 847170937}
   - component: {fileID: 847170940}
   m_Layer: 10
   m_Name: echoCam
@@ -1017,13 +1016,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!81 &847170937
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 847170935}
-  m_Enabled: 1
 --- !u!124 &847170938
 Behaviour:
   m_ObjectHideFlags: 0
@@ -1074,7 +1066,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 847170935}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 12, y: 12, z: 0}
@@ -1089,7 +1081,6 @@ GameObject:
   - component: {fileID: 988082726}
   - component: {fileID: 988082729}
   - component: {fileID: 988082728}
-  - component: {fileID: 988082727}
   - component: {fileID: 988082730}
   m_Layer: 9
   m_Name: phoneCam
@@ -1111,13 +1102,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -79.51501, y: 51.558002, z: 36.499}
---- !u!81 &988082727
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 988082725}
-  m_Enabled: 1
 --- !u!124 &988082728
 Behaviour:
   m_ObjectHideFlags: 0
@@ -1168,7 +1152,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 988082725}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 10, y: 12, z: 0}
@@ -1234,7 +1218,7 @@ GameObject:
   - component: {fileID: 1106963018}
   m_Layer: 0
   m_Name: Controller
-  m_TagString: Untagged
+  m_TagString: CameraController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1251,6 +1235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentMaterialIndex: 0
+  DeviceTriggered: 000000
   DeskCamera: {fileID: 615729560}
   PhoneCamera: {fileID: 988082729}
   EchoCamera: {fileID: 847170939}
@@ -2351,6 +2336,7 @@ GameObject:
   - component: {fileID: 2137254197}
   - component: {fileID: 2137254198}
   - component: {fileID: 2137254199}
+  - component: {fileID: 2137254200}
   m_Layer: 0
   m_Name: Girl
   m_TagString: Untagged
@@ -2418,13 +2404,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2137254192}
-  m_LocalRotation: {x: -0, y: 0.9948652, z: -0, w: -0.10120936}
+  m_LocalRotation: {x: -0, y: 0.7760703, z: -0, w: 0.63064647}
   m_LocalPosition: {x: -1.79, y: 2.67, z: -13.81}
   m_LocalScale: {x: 2.8670936, y: 2.867093, z: 2.867093}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 26
-  m_LocalEulerAnglesHint: {x: 0, y: 191.618, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 101.80401, z: 0}
 --- !u!114 &2137254197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2464,3 +2450,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strikes: 3
   gameOver: 0
+--- !u!114 &2137254200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2137254192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa81845aed176774581c59a6ce1d30fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GirlFOV: 110
+  GirlGazeRadius: 10
+  GirlGazeAngle: 47
+  deviceLayerMask:
+  - serializedVersion: 2
+    m_Bits: 256
+  - serializedVersion: 2
+    m_Bits: 512
+  - serializedVersion: 2
+    m_Bits: 1024
+  CameraMasks:
+    serializedVersion: 2
+    m_Bits: 2048
+  VisibilityList: []
+  CameraTransform:
+  - {fileID: 615729561}
+  - {fileID: 988082726}
+  - {fileID: 847170936}
