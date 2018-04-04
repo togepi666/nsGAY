@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -744,7 +744,8 @@ GameObject:
   - component: {fileID: 615729560}
   - component: {fileID: 615729559}
   - component: {fileID: 615729558}
-  m_Layer: 0
+  - component: {fileID: 615729562}
+  m_Layer: 8
   m_Name: compCam
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -814,6 +815,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
+--- !u!65 &615729562
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 615729557}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 4, z: 4}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &653063190
 GameObject:
   m_ObjectHideFlags: 0
@@ -1292,7 +1305,7 @@ GameObject:
   - component: {fileID: 1106963021}
   m_Layer: 0
   m_Name: Controller
-  m_TagString: Untagged
+  m_TagString: CameraController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1309,6 +1322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentMaterialIndex: 0
+  DeviceTriggered: 000000
   DeskCamera: {fileID: 615729560}
   PhoneCamera: {fileID: 988082729}
   EchoCamera: {fileID: 847170939}
@@ -2703,6 +2717,7 @@ GameObject:
   - component: {fileID: 2137254197}
   - component: {fileID: 2137254198}
   - component: {fileID: 2137254199}
+  - component: {fileID: 2137254200}
   m_Layer: 0
   m_Name: Girl
   m_TagString: Untagged
@@ -2818,3 +2833,30 @@ MonoBehaviour:
   gameOver: 0
   strike1: {fileID: 1595032380}
   strike2: {fileID: 1898165004}
+--- !u!114 &2137254200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2137254192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa81845aed176774581c59a6ce1d30fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GirlGazeRadius: 12
+  GirlGazeAngle: 48
+  BulletLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  DeviceLayerMask:
+  - serializedVersion: 2
+    m_Bits: 256
+  - serializedVersion: 2
+    m_Bits: 0
+  - serializedVersion: 2
+    m_Bits: 0
+  CameraTransform:
+  - {fileID: 615729561}
+  - {fileID: 988082726}
+  - {fileID: 847170936}
