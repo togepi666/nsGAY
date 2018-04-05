@@ -18,6 +18,7 @@ public class girlGaze : MonoBehaviour
 
 	private float _currentRayAngle;
 	private GameObject _camController;
+	private List<Transform> _bulletTransforms;
 	private void Start()
 	{
 		//StartCoroutine(FindTarget());
@@ -47,9 +48,17 @@ public class girlGaze : MonoBehaviour
 				{
 					Debug.DrawLine(transform.position,CameraTransform[i].position,Color.blue);
 					RaycastHit bulletHit;
-					if (Physics.Raycast(transform.position, transform.forward, out bulletHit, BulletLayerMask))
+					Collider[] bulletColliders = Physics.OverlapSphere(transform.position, GirlGazeRadius, BulletLayerMask);
+					for (int j = 0; j < bulletColliders.Length; j++)
 					{
-						gameObject.GetComponent<StrikeScript>().strikes--;
+						var bulletTran = bulletColliders[j].gameObject.transform;
+						Vector3 bulletRayDirection = (bulletTran.position - transform.position).normalized;
+						float bulletRayDist = Vector3.Distance(transform.position, bulletTran.position);
+						if (Physics.Raycast(transform.position, bulletRayDirection, bulletRayDist, BulletLayerMask))
+						{
+							Debug.DrawLine(bulletTran.position,transform.position,Color.yellow);
+							gameObject.GetComponent<StrikeScript>().strikes--;
+						}
 					}
 				}
 		}
