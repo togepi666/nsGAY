@@ -20,7 +20,7 @@ public class BulletBehavior : MonoBehaviour
 			currentTime += Time.deltaTime;
 		}
 
-		if (currentTime > 3)
+		if (currentTime > .5f)
 		{
 			Destroy(gameObject);
 		}
@@ -28,6 +28,7 @@ public class BulletBehavior : MonoBehaviour
 
 	private void OnCollisionEnter(Collision other)
 	{
+		if(!other.gameObject.CompareTag("Player") ||other.gameObject.CompareTag("CameraLocation"))
 		crashed = true;
 	}
 }
