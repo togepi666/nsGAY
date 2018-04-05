@@ -7,6 +7,8 @@ TagManager:
   - Bullet
   - Enemy
   - CameraController
+  - Important
+  - CameraLocation
   layers:
   - Default
   - TransparentFX
@@ -20,7 +22,7 @@ TagManager:
   - Phone
   - Echo
   - Devices
-  - 
+  - Bullet
   - 
   - 
   - 

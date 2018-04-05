@@ -40,7 +40,22 @@ public class StrikeScript : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            strikes--;
+            if (other.gameObject.GetComponent<EnemyBehavior>().alive)
+            {
+                strikes--;
+                other.gameObject.GetComponent<EnemyBehavior>().alive = false;
+
+            }
+        }
+
+        if (other.gameObject.CompareTag("Bullet"))
+        {
+            if (!other.gameObject.GetComponent<BulletBehavior>().crashed)
+            {
+                strikes--;
+                other.gameObject.GetComponent<BulletBehavior>().crashed = true;
+                Debug.Log("SET TO TRUE");
+            }
         }
     }
 
