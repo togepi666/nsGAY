@@ -15,7 +15,7 @@ public class girlGaze : MonoBehaviour
 	public Transform[] CameraTransform = new Transform[3];
 
 
-
+	private bool _oneShot;
 	private float _currentRayAngle;
 	private GameObject _camController;
 	private List<Transform> _bulletTransforms;
@@ -24,15 +24,16 @@ public class girlGaze : MonoBehaviour
 		//StartCoroutine(FindTarget());
 	}
 
-	void FixedUpdate()
+	void Update()
+	{
+		
+	}
+
+	private void FixedUpdate()
 	{
 		DetectCamera();
 	}
-	/*IEnumerator FindTarget()
-	{
-		yield return  new WaitForSeconds(0.2f);
-		DetectCamera();
-	}*/
+
 	private void DetectCamera()
 	{
 		//VisibilityList.Clear();
@@ -48,16 +49,32 @@ public class girlGaze : MonoBehaviour
 				{
 					Debug.DrawLine(transform.position,CameraTransform[i].position,Color.blue);
 					RaycastHit bulletHit;
-					Collider[] bulletColliders = Physics.OverlapSphere(transform.position, GirlGazeRadius, BulletLayerMask);
-					for (int j = 0; j < bulletColliders.Length; j++)
+					List<Collider> colliders = new List<Collider>();
+					colliders.AddRange(Physics.OverlapSphere(transform.position, GirlGazeRadius, BulletLayerMask));
+					//Collider[] bulletColliders = Physics.OverlapSphere(transform.position, GirlGazeRadius, BulletLayerMask);
+					for (int j = 0; j < colliders.Count; j++)
 					{
-						var bulletTran = bulletColliders[j].gameObject.transform;
+						var bulletTran = colliders[j].gameObject.transform;
 						Vector3 bulletRayDirection = (bulletTran.position - transform.position).normalized;
 						float bulletRayDist = Vector3.Distance(transform.position, bulletTran.position);
 						if (Physics.Raycast(transform.position, bulletRayDirection, bulletRayDist, BulletLayerMask))
 						{
+							_oneShot = false;
 							Debug.DrawLine(bulletTran.position,transform.position,Color.yellow);
-							gameObject.GetComponent<StrikeScript>().strikes--;
+							if (!_oneShot)
+							{
+								if (bulletTran.gameObject.GetComponent<BulletBehavior>().justShot == true)
+								{
+									gameObject.GetComponent<StrikeScript>().strikes--;
+									bulletTran.gameObject.GetComponent<BulletBehavior>().justShot = false;
+								}
+
+								_oneShot = true;
+							}
+						}
+						else
+						{
+							colliders.Clear();
 						}
 					}
 				}
