@@ -14,7 +14,6 @@ public class Timer : MonoBehaviour {
 
     private void Awake()
     {
-        DontDestroyOnLoad(this);
     }
 
     // Update is called once per frame

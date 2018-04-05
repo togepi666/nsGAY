@@ -11,17 +11,31 @@ public class GeneralThings : MonoBehaviour {
 	public GameObject spawnArea1;
 	public GameObject spawnArea2;
 	public GameObject spawnArea3;
+	public GameObject timer;
+	public float score = 0;
 
 	public float currentTime;
+
+	void Awake()
+	{
+		DontDestroyOnLoad(gameObject);
+	}
 	void Update()
 	{
-		currentTime += Time.deltaTime;
-		if (currentTime > 3){
-			int ran = (int)(Random.RandomRange(0, 3)+1);
+		if(spawnArea1.gameObject != null){
+			currentTime += Time.deltaTime;
+			if (currentTime > 2){
+				int ran = (int)(Random.RandomRange(0, 3)+1);
 
-			SpawnEnemy(ran);
-			currentTime = 0;
+				SpawnEnemy(ran);
+				currentTime = 0;
+			}
 		}
+		if (timer != null)
+		{
+			score = timer.GetComponent<Timer>().timer;
+		}
+
 	}
 
 
