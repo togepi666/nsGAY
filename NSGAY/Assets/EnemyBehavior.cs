@@ -10,9 +10,10 @@ public class EnemyBehavior : MonoBehaviour
 
 	public bool alive = true;
 
-	public float speed = 0;
+	public float speed = 5f;
 
 	public float currentTime = 0;
+
 	// Use this for initialization
 	void Start () {
 		mainCharacter = GameObject.Find("Girl");
@@ -25,7 +26,7 @@ public class EnemyBehavior : MonoBehaviour
 		if (alive)
 		{
 			transform.LookAt(mainCharacter.transform);
-			transform.position = Vector3.MoveTowards(transform.position, mainCharacter.transform.position, 0.03f * speed);
+			transform.position = Vector3.MoveTowards(transform.position, mainCharacter.transform.position, 0.03f*speed);
 			transform.position = new Vector3(transform.position.x +Mathf.Sin(Time.time*2) *.1f, transform.position.y+Mathf.Sin(Time.time*2) *.1f,transform.position.z);
 				
 		}
