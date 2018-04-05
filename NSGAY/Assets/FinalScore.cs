@@ -21,9 +21,11 @@ public class FinalScore : MonoBehaviour {
        // score = GameObject.Find("timer").GetComponent<Timer>().timer;
         GetComponent<Text>().text = "Time " + score;
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SceneManager.LoadScene(0);
-        }
+		if (Input.GetKeyDown(KeyCode.Space))
+		{
+			SceneManager.LoadScene(0);
+			Destroy(generalStuff.gameObject);
+
+		}
 	}
 }

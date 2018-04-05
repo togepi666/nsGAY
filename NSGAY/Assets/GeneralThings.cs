@@ -16,6 +16,17 @@ public class GeneralThings : MonoBehaviour {
 
 	public float currentTime;
 
+	private void Start()
+	{
+		GameObject[] importants = GameObject.FindGameObjectsWithTag("Important");
+		{
+			if (importants.Length > 1)
+			{
+				Destroy(gameObject);
+			}
+		}
+	}
+
 	void Awake()
 	{
 		DontDestroyOnLoad(gameObject);
