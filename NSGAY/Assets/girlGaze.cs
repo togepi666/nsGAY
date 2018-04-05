@@ -16,12 +16,10 @@ public class girlGaze : MonoBehaviour
 
 
 
-	private StrikeScript _striker;
 	private float _currentRayAngle;
 	private GameObject _camController;
 	private void Start()
 	{
-		_striker = GetComponent<StrikeScript>();
 		//StartCoroutine(FindTarget());
 	}
 
@@ -51,7 +49,7 @@ public class girlGaze : MonoBehaviour
 					RaycastHit bulletHit;
 					if (Physics.Raycast(transform.position, transform.forward, out bulletHit, BulletLayerMask))
 					{
-						_striker.strikes--;
+						gameObject.GetComponent<StrikeScript>().strikes--;
 					}
 				}
 		}
