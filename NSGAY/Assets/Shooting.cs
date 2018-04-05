@@ -29,12 +29,13 @@ public class Shooting : MonoBehaviour {
 
                 if (Physics.Raycast(ray, out hit, 400.0f))
                 {
-                    Debug.DrawLine(ray.origin, hit.point, Color.red);
+                Debug.DrawLine(ray.origin, hit.point, Color.red);
 
-                    GameObject newBullet = Instantiate(bullet, cameraObject.transform.position, cameraObject.transform.rotation) as GameObject;
-                    newBullet.GetComponent<Rigidbody>().velocity = (hit.point - transform.position).normalized * speed;
-                }
+                GameObject newBullet =
+                    Instantiate(bullet, cameraObject.transform.position, cameraObject.transform.rotation) as GameObject;
+                newBullet.GetComponent<Rigidbody>().velocity = (hit.point - transform.position).normalized * speed;
             }
+        }
         }
 
     }
