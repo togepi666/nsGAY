@@ -25,7 +25,7 @@ public class girlAI : MonoBehaviour
 		girlTurn = Random.Range(-180f, 180f);
 		girlRotation = new Vector3(0f, girlTurn, 0f);
 		
-		GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0f,0f,girlMotion), ForceMode.Acceleration);
+		GetComponent<Rigidbody>().AddForce(transform.forward * 20, ForceMode.Force);
 		if (interval > 2)
 		{
 			GetComponent<Rigidbody>().AddRelativeTorque(girlRotation, ForceMode.Force);
