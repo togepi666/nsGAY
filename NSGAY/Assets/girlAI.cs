@@ -25,11 +25,12 @@ public class girlAI : MonoBehaviour
 		girlTurn = Random.Range(-180f, 180f);
 		girlRotation = new Vector3(0f, girlTurn, 0f);
 		
-		GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0f,0f,girlMotion), ForceMode.Acceleration);
-		if (interval > 2)
+		if (interval > .5f)
 		{
-			GetComponent<Rigidbody>().AddRelativeTorque(girlRotation, ForceMode.Force);
+			GetComponent<Rigidbody>().AddRelativeTorque(girlRotation *5, ForceMode.Force);
 			interval = 0;
+			GetComponent<Rigidbody>().AddForce(transform.forward * 10, ForceMode.Impulse);
+
 		}
 		
 	}

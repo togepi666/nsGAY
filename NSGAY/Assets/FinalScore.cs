@@ -19,7 +19,7 @@ public class FinalScore : MonoBehaviour {
 	void Update () {
 		
        // score = GameObject.Find("timer").GetComponent<Timer>().timer;
-        GetComponent<Text>().text = "Time " + score;
+        GetComponent<Text>().text = "Time: " + score;
 
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
