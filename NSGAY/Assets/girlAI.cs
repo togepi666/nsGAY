@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Graphs;
 using UnityEngine;
 
 public class girlAI : MonoBehaviour
@@ -27,7 +26,7 @@ public class girlAI : MonoBehaviour
 		
 		if (interval > .5f)
 		{
-			GetComponent<Rigidbody>().AddRelativeTorque(girlRotation *5, ForceMode.Force);
+			GetComponent<Rigidbody>().AddRelativeTorque(girlRotation *2, ForceMode.Force);
 			interval = 0;
 			GetComponent<Rigidbody>().AddForce(transform.forward * 10, ForceMode.Impulse);
 

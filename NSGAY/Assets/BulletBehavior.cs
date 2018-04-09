@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using NUnit.Framework.Constraints;
 using UnityEngine;
 
 public class BulletBehavior : MonoBehaviour
@@ -18,8 +17,8 @@ public class BulletBehavior : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		totalTime = +Time.deltaTime;
-		if (totalTime > .3f)
+		totalTime +=Time.deltaTime;
+		if (totalTime > .01f)
 		{
 			justShot = false;
 		}
@@ -36,7 +35,9 @@ public class BulletBehavior : MonoBehaviour
 
 	private void OnCollisionEnter(Collision other)
 	{
-		if(!other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("CameraLocation"))
+		Debug.Log(other.gameObject.tag);
+		if(!other.gameObject.CompareTag("Player") && !other.gameObject.CompareTag("CameraLocation"))
 			crashed = true;
+		
 	}
 }
