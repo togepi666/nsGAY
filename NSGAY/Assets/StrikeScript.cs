@@ -54,6 +54,7 @@ public class StrikeScript : MonoBehaviour {
             {
                 strikes--;
                 other.gameObject.GetComponent<BulletBehavior>().crashed = true;
+                other.gameObject.GetComponent<BulletBehavior>().justShot = false;
                 Debug.Log("SET TO TRUE");
             }
         }
