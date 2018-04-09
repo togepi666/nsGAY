@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
-using UnityEditor.Graphs;
+//using UnityEditor;
 using UnityEngine;
 
 public class girlGaze : MonoBehaviour
@@ -148,6 +147,7 @@ public class girlGaze : MonoBehaviour
 		return new Vector3(Mathf.Sin(gazeAngle*Mathf.Deg2Rad),0,Mathf.Cos(gazeAngle*Mathf.Deg2Rad));
 	}
 }
+/*
 [CustomEditor(typeof(girlGaze))]
 public class drawSight : Editor
 {
@@ -170,3 +170,4 @@ public class drawSight : Editor
 		Handles.DrawLine(gazer.transform.position,gazer.transform.position+viewLineB *gazer.GirlGazeRadius);
 	}
 }
+*/
