@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/LoseScreen.unity
     guid: 59b5f02c79dc3234f88820d16925e53a
+  - enabled: 1
+    path: Assets/MenuScreen.unity
+    guid: b77da6646029fa54d8fa8d7ea20921e6
