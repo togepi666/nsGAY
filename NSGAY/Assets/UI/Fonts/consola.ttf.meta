@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: 7a2c5fd6286fc9941bb44f72ae9255ec
+timeCreated: 1523407913
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Consolas
+  fontNames:
+  - Consolas
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 66de7de0ca59edd4ca30d51724264d61, type: 3}
+  - {fileID: 12800000, guid: 1ba2626224f9a9e4b913c3ba28018868, type: 3}
+  - {fileID: 12800000, guid: 6adeee7d5d446b649bda7d603d58c2d9, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
