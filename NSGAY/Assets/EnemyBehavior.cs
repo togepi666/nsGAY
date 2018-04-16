@@ -14,10 +14,13 @@ public class EnemyBehavior : MonoBehaviour
 
 	public float currentTime = 0;
 
+	public int movementType;
 	// Use this for initialization
 	void Start () {
 		mainCharacter = GameObject.Find("Girl");
 		speed = Random.RandomRange(.7f, 1.5f);
+		movementType = Random.Range(0, 3);
+		
 	}
 	
 	// Update is called once per frame
@@ -25,15 +28,33 @@ public class EnemyBehavior : MonoBehaviour
 	{
 		if (alive)
 		{
-			transform.LookAt(mainCharacter.transform);
-			transform.position = Vector3.MoveTowards(transform.position, mainCharacter.transform.position, 0.03f*speed);
-			transform.position = new Vector3(transform.position.x +Mathf.Sin(Time.time*2) *.1f, transform.position.y+Mathf.Sin(Time.time*2) *.1f,transform.position.z);
+			if (movementType == 0)
+			{
+				transform.LookAt(mainCharacter.transform);
+				transform.position = Vector3.MoveTowards(transform.position, mainCharacter.transform.position, 0.03f*speed);
+				transform.position = new Vector3(transform.position.x +Mathf.Sin(Time.time*2) *.1f, transform.position.y+Mathf.Sin(Time.time*2) *.1f,transform.position.z);
+			
+			}
+			if (movementType == 1)
+			{
+				transform.LookAt(mainCharacter.transform);
+				transform.position = Vector3.MoveTowards(transform.position, mainCharacter.transform.position, 0.03f*speed);
+			
+			}
+
+			if (movementType == 2)
+			{
+				transform.LookAt(mainCharacter.transform);
+				transform.position = Vector3.MoveTowards(transform.position, mainCharacter.transform.position, 0.03f*speed);
+				transform.position = new Vector3(transform.position.x +Mathf.Sin(Time.time*4) *.1f, transform.position.y-Mathf.Sin(Time.time+1) *.1f,transform.position.z );
+			
+			}
 				
 		}
 		else
 		{
 			currentTime += Time.deltaTime;
-			transform.localScale /= 1.001f;
+			transform.localScale /= 1.05f;
 			if (currentTime > 4)
 			{
 				Destroy(gameObject);
