@@ -5,7 +5,7 @@ using UnityEngine;
 public class Shooting : MonoBehaviour {
 
     public GameObject bullet;
-    public float speed = 2 ;
+    private float speed = 60;
     RaycastHit hit;
     public int designatedCamera;
     public Camera cameraObject;
@@ -33,8 +33,11 @@ public class Shooting : MonoBehaviour {
 
                 GameObject newBullet =
                     Instantiate(bullet, cameraObject.transform.position, cameraObject.transform.rotation) as GameObject;
-                newBullet.GetComponent<Rigidbody>().velocity = (hit.point - cameraObject.transform.position).normalized * speed;
-            }
+                newBullet.GetComponent<Rigidbody>().velocity = ((hit.point - cameraObject.transform.position).normalized)* speed;
+                    Debug.Log(newBullet.GetComponent<Rigidbody>().velocity);
+                    Debug.Log(newBullet.GetComponent<Rigidbody>().velocity);
+                    Debug.Log(speed);
+                }
         }
         }
 

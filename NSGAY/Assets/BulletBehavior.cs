@@ -40,7 +40,7 @@ public class BulletBehavior : MonoBehaviour
 	private void OnCollisionEnter(Collision other)
 	{
 		Debug.Log(other.gameObject.tag);
-		if(!other.gameObject.CompareTag("Player") && !other.gameObject.CompareTag("CameraLocation"))
+		if(!other.gameObject.CompareTag("Player") && !other.gameObject.CompareTag("CameraLocation") && !other.gameObject.CompareTag("Bullet"))
 			crashed = true;
 		
 	}
