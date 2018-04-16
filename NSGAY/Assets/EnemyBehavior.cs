@@ -17,7 +17,7 @@ public class EnemyBehavior : MonoBehaviour
 	// Use this for initialization
 	void Start () {
 		mainCharacter = GameObject.Find("Girl");
-		speed = Random.RandomRange(1, 1.5f);
+		speed = Random.RandomRange(.7f, 1.5f);
 	}
 	
 	// Update is called once per frame
@@ -33,6 +33,7 @@ public class EnemyBehavior : MonoBehaviour
 		else
 		{
 			currentTime += Time.deltaTime;
+			transform.localScale /= 1.001f;
 			if (currentTime > 4)
 			{
 				Destroy(gameObject);
