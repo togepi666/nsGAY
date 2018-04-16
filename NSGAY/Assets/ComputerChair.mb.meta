@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: cda0e8d3d29d97e43a9590cae8bfe939
-timeCreated: 1522945623
+timeCreated: 1523911068
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -9,7 +9,6 @@ ModelImporter:
     400000: //RootNode
     2100000: Green
     2100002: blinn1
-    2100004: black
     2300000: //RootNode
     3300000: //RootNode
     4300000: pCube1
