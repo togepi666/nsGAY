@@ -27,6 +27,10 @@ public class BulletBehavior : MonoBehaviour
 			currentTime += Time.deltaTime;
 		}
 
+		if (totalTime > 5)
+		{
+			crashed = true;
+		}
 		if (currentTime > .5f)
 		{
 			Destroy(gameObject);
