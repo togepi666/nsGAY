@@ -40,4 +40,9 @@ public class girlAI : MonoBehaviour
 		{
 		}
 	}
+	void OnCollisionStay(Collision other){
+	if(!other.gameObject.CompareTag("floor")){
+	    GetComponent<Rigidbody>().AddForce(Vector3.zero - transform.position);
+	}
+	}
 }

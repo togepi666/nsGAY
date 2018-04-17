@@ -9,6 +9,7 @@ TagManager:
   - CameraController
   - Important
   - CameraLocation
+  - floor
   layers:
   - Default
   - TransparentFX
