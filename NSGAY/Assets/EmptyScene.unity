@@ -1234,7 +1234,7 @@ GameObject:
   - component: {fileID: 682569169}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2256,9 +2256,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1465277925}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -4.911, y: 8.14, z: -22.964}
-  m_LocalScale: {x: 0.31518745, y: 0.31518748, z: 0.31518748}
+  m_LocalScale: {x: 0.3151874, y: 0.31518748, z: 0.31518742}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -2777,8 +2777,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.99552214, y: 2.0892286, z: 0.8865281}
-  m_Center: {x: 0.08058324, y: 0.81341916, z: -0.020383667}
+  m_Size: {x: 1.1107017, y: 2.0892286, z: 0.9830606}
+  m_Center: {x: 0.022993563, y: 0.81341916, z: 0.027882276}
 --- !u!54 &1715876191
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3473,7 +3473,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2137254192}
   m_LocalRotation: {x: -0, y: 0.657643, z: -0, w: 0.75332975}
-  m_LocalPosition: {x: 7.94, y: 2.67, z: -13.81}
+  m_LocalPosition: {x: -5, y: 2.67, z: -10}
   m_LocalScale: {x: 2.8670936, y: 2.867093, z: 2.867093}
   m_Children:
   - {fileID: 1921381588}
