@@ -22,6 +22,9 @@
             </e>
           </e>
         </e>
+        <e p="Shaders" t="Include">
+          <e p="PRojectMe.shader" t="Include" />
+        </e>
         <e p="Shooting.cs" t="Include" />
         <e p="StrikeScript.cs" t="Include" />
         <e p="Timer.cs" t="Include" />
