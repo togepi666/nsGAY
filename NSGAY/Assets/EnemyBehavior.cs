@@ -24,7 +24,7 @@ public class EnemyBehavior : MonoBehaviour
 		mainCharacter = GameObject.Find("Girl");
 		speed = Random.RandomRange(.7f, 1.5f);
 		movementType = Random.Range(0, 3);
-        mat = GetComponent<Renderer>().material;
+        mat = GetComponentInChildren<Renderer>().material;
 
     }
 	
@@ -33,6 +33,7 @@ public class EnemyBehavior : MonoBehaviour
 	{
 		if (alive)
 		{
+		transform.LookAt(mainCharacter.transform);
 			if (movementType == 0)
 			{
 				transform.LookAt(mainCharacter.transform);
