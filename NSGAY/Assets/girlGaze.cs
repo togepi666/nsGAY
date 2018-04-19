@@ -1,13 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-//using UnityEditor;
+using UnityEditor;
 using UnityEngine;
 
 public class girlGaze : MonoBehaviour
 {
 	public float GirlGazeRadius;
-	[Range(0,360)]
-	public float GirlGazeAngle;
+	[Range(0, 360)] public float GirlGazeAngle;
 
 	public LayerMask BulletLayerMask;
 	public LayerMask[] DeviceLayerMask = new LayerMask[3];
@@ -18,6 +17,7 @@ public class girlGaze : MonoBehaviour
 	private float _currentRayAngle;
 	private GameObject _camController;
 	private List<Transform> _bulletTransforms;
+
 	private void Start()
 	{
 		//StartCoroutine(FindTarget());
@@ -25,7 +25,7 @@ public class girlGaze : MonoBehaviour
 
 	void Update()
 	{
-		
+
 	}
 
 	private void FixedUpdate()
@@ -39,14 +39,14 @@ public class girlGaze : MonoBehaviour
 
 		for (int i = 0; i < DeviceLayerMask.Length; i++)
 		{
-			Physics.OverlapSphere(transform.position, GirlGazeRadius,DeviceLayerMask[i] );
+			Physics.OverlapSphere(transform.position, GirlGazeRadius, DeviceLayerMask[i]);
 			Vector3 _gazeDirection = (CameraTransform[i].position - transform.position).normalized;
-			if (Vector3.Angle( _gazeDirection,transform.forward) <= GirlGazeAngle / 2)
+			if (Vector3.Angle(_gazeDirection, transform.forward) <= GirlGazeAngle / 2)
 			{
 				float rayDistance = Vector3.Distance(transform.position, CameraTransform[i].position);
-				if (Physics.Raycast(transform.position, _gazeDirection, rayDistance,DeviceLayerMask[i] ))
+				if (Physics.Raycast(transform.position, _gazeDirection, rayDistance, DeviceLayerMask[i]))
 				{
-					Debug.DrawLine(transform.position,CameraTransform[i].position,Color.blue);
+					Debug.DrawLine(transform.position, CameraTransform[i].position, Color.blue);
 					RaycastHit bulletHit;
 					List<Collider> colliders = new List<Collider>();
 					colliders.AddRange(Physics.OverlapSphere(transform.position, GirlGazeRadius, BulletLayerMask));
@@ -59,7 +59,7 @@ public class girlGaze : MonoBehaviour
 						if (Physics.Raycast(transform.position, bulletRayDirection, bulletRayDist, BulletLayerMask))
 						{
 							_oneShot = false;
-							Debug.DrawLine(bulletTran.position,transform.position,Color.yellow);
+							Debug.DrawLine(bulletTran.position, transform.position, Color.yellow);
 							if (!_oneShot)
 							{
 								if (bulletTran.gameObject.GetComponent<BulletBehavior>().justShot == true)
@@ -77,8 +77,8 @@ public class girlGaze : MonoBehaviour
 						}
 					}
 				}
-		}
-		
+			}
+
 			/*else
 			{
 				_camSwitch.DeviceTriggered[_camSwitch.CurrentMaterialIndex] = false;
@@ -131,7 +131,8 @@ public class girlGaze : MonoBehaviour
 		}*/
 	}
 
-	private void OnDrawGizmos()
+
+private void OnDrawGizmos()
 	{
 		Gizmos.color = Color.green;
 		Gizmos.DrawWireSphere(transform.position, GirlGazeRadius);
@@ -147,7 +148,8 @@ public class girlGaze : MonoBehaviour
 		return new Vector3(Mathf.Sin(gazeAngle*Mathf.Deg2Rad),0,Mathf.Cos(gazeAngle*Mathf.Deg2Rad));
 	}
 }
-/*
+
+
 [CustomEditor(typeof(girlGaze))]
 public class drawSight : Editor
 {
@@ -170,4 +172,4 @@ public class drawSight : Editor
 		Handles.DrawLine(gazer.transform.position,gazer.transform.position+viewLineB *gazer.GirlGazeRadius);
 	}
 }
-*/
+
