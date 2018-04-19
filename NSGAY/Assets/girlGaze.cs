@@ -15,17 +15,40 @@ public class girlGaze : MonoBehaviour
 
 	private bool _oneShot;
 	private float _currentRayAngle;
-	private GameObject _camController;
+	private CameraSwitching _camController;
 	private List<Transform> _bulletTransforms;
 
 	private void Start()
 	{
+		_camController = GameObject.FindGameObjectWithTag("CameraController").GetComponent<CameraSwitching>();
 		//StartCoroutine(FindTarget());
 	}
 
 	void Update()
 	{
 
+	}
+
+	void AdjustBounds()
+	{
+		GirlGazeAngle = GirlGazeRadius;
+		if (_camController.ComputerCamEnabled)
+		{
+			GirlGazeRadius = Mathf.Abs(CameraTransform[0].position.z - transform.position.z)
+			                 + Mathf.Abs(CameraTransform[0].position.x - transform.position.x);
+		}
+
+		if (_camController.PhoneCamEnabled)
+		{
+			GirlGazeRadius = Mathf.Abs(CameraTransform[1].position.z - transform.position.z)
+			 + Mathf.Abs(CameraTransform[1].position.x - transform.position.x);
+		}
+
+		if (_camController.EchoCamEnabled)
+		{
+			GirlGazeRadius = Mathf.Abs(CameraTransform[2].position.z - transform.position.z)
+			                 + Mathf.Abs(CameraTransform[2].position.x - transform.position.x);
+		}
 	}
 
 	private void FixedUpdate()
@@ -36,7 +59,7 @@ public class girlGaze : MonoBehaviour
 	private void DetectCamera()
 	{
 		//VisibilityList.Clear();
-
+        AdjustBounds();
 		for (int i = 0; i < DeviceLayerMask.Length; i++)
 		{
 			Physics.OverlapSphere(transform.position, GirlGazeRadius, DeviceLayerMask[i]);

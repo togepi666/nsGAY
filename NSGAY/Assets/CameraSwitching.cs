@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraSwitching : MonoBehaviour
 {
 	public int CurrentMaterialIndex = 0;
-	public bool[] DeviceTriggered = new bool[3];
+	public bool ComputerCamEnabled, PhoneCamEnabled, EchoCamEnabled;
 	public Camera DeskCamera, PhoneCamera, EchoCamera;
 	private AudioSource _changeSound;
 	private Rect _mainScreen = new Rect(0,0,0.65f,1);
@@ -38,6 +38,9 @@ public class CameraSwitching : MonoBehaviour
 				DeskCamera.rect = _mainScreen;
 				PhoneCamera.rect = _screen2;
 				EchoCamera.rect = _screen3;
+				ComputerCamEnabled = true;
+				PhoneCamEnabled = false;
+				EchoCamEnabled = false;
 				
 				break;
 			case 1:
@@ -47,7 +50,9 @@ public class CameraSwitching : MonoBehaviour
 				DeskCamera.rect = _screen2;
 				PhoneCamera.rect = _mainScreen;
 				EchoCamera.rect = _screen3;
-		
+				ComputerCamEnabled = false;
+				PhoneCamEnabled = true;
+				EchoCamEnabled = false;
 				break;
 			case 2:
 				DeskCamera.depth = 0;
@@ -56,7 +61,9 @@ public class CameraSwitching : MonoBehaviour
 				DeskCamera.rect = _screen3;
 				PhoneCamera.rect = _screen2;
 				EchoCamera.rect = _mainScreen;
-			
+				PhoneCamEnabled = false;
+				PhoneCamEnabled = false;
+				EchoCamEnabled = true;
 				break;
 		}
 
