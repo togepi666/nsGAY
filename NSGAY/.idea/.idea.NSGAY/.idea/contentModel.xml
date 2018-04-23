@@ -24,6 +24,7 @@
           </e>
         </e>
         <e p="Shaders" t="Include">
+          <e p="Multiply.shader" t="Include" />
           <e p="PRojectMe.shader" t="Include" />
         </e>
         <e p="Shooting.cs" t="Include" />

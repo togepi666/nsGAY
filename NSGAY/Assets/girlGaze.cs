@@ -16,12 +16,14 @@ public class girlGaze : MonoBehaviour
 	private bool _oneShot;
 	private float _currentRayAngle;
 	private CameraSwitching _camController;
+	[SerializeField]private Transform _gazeSpotlight;
 	private List<Transform> _bulletTransforms;
 
 	private void Start()
 	{
 		_camController = GameObject.FindGameObjectWithTag("CameraController").GetComponent<CameraSwitching>();
 		//StartCoroutine(FindTarget());
+		_gazeSpotlight = GameObject.FindGameObjectWithTag("Projector").GetComponent<Transform>();
 	}
 
 	void Update()
@@ -31,24 +33,31 @@ public class girlGaze : MonoBehaviour
 
 	void AdjustBounds()
 	{
-		GirlGazeAngle = GirlGazeRadius;
+		GirlGazeAngle = 120f;
 		if (_camController.ComputerCamEnabled)
 		{
 			GirlGazeRadius = Mathf.Abs(CameraTransform[0].position.z - transform.position.z)
-			                 + Mathf.Abs(CameraTransform[0].position.x - transform.position.x);
+			                 + Mathf.Abs(CameraTransform[0].position.x - transform.position.x) / 2;
 		}
 
 		if (_camController.PhoneCamEnabled)
 		{
 			GirlGazeRadius = Mathf.Abs(CameraTransform[1].position.z - transform.position.z)
-			 + Mathf.Abs(CameraTransform[1].position.x - transform.position.x);
+			 + Mathf.Abs(CameraTransform[1].position.x - transform.position.x)/2;
 		}
 
 		if (_camController.EchoCamEnabled)
 		{
 			GirlGazeRadius = Mathf.Abs(CameraTransform[2].position.z - transform.position.z)
-			                 + Mathf.Abs(CameraTransform[2].position.x - transform.position.x);
+			                 + Mathf.Abs(CameraTransform[2].position.x - transform.position.x)/2;
 		}
+
+		//_gazeSpotlight.orthographicSize = GirlGazeRadius;
+		//_gazeSpotlight.orthographicSize = GirlGazeAngle - GirlGazeRadius;
+		_gazeSpotlight.localScale = new Vector3(2.86f,2.86f,GirlGazeRadius/4);
+		//_gazeSpotlight.aspectRatio = 2*(Mathf.Deg2Rad * GirlGazeRadius);
+		//smallest value 10, 1.27
+		//max value 1.4 & 30
 	}
 
 	private void FixedUpdate()
