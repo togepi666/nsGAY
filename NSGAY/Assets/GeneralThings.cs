@@ -13,7 +13,7 @@ public class GeneralThings : MonoBehaviour {
 	public GameObject spawnArea3;
 	public GameObject timer;
 	public float score = 0;
-
+    public float difficulty = .02f;
 	public float currentTime;
 
 	private void Start()
@@ -35,11 +35,19 @@ public class GeneralThings : MonoBehaviour {
 	{
 		if(spawnArea1.gameObject != null){
 			currentTime += Time.deltaTime;
-			if (currentTime > 2){
+			if (currentTime > 3 + difficulty){
 				int ran = (int)(Random.RandomRange(0, 3)+1);
 
 				SpawnEnemy(ran);
-				currentTime = 0;
+				currentTime = 0 + difficulty;
+			}
+
+			if (timer.GetComponent<Timer>().timer > 10)
+			{
+				if (difficulty < 2)
+				{
+					difficulty += .4f;
+				}
 			}
 		}
 		if (timer != null)
