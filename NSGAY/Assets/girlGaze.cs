@@ -15,59 +15,78 @@ public class girlGaze : MonoBehaviour
 
 	private bool _oneShot;
 	private float _currentRayAngle;
+	private float _minAngleBound,_maxAngleBound;
+	private float _minNegativeBound, _maxNegativeBound;
 	private CameraSwitching _camController;
-	[SerializeField]private Transform _gazeSpotlight;
+	[SerializeField]private Projector _gazeSpotlight;
 	private List<Transform> _bulletTransforms;
+	private Vector3 _currentTransformRotation;
 
 	private void Start()
 	{
 		_camController = GameObject.FindGameObjectWithTag("CameraController").GetComponent<CameraSwitching>();
-		//StartCoroutine(FindTarget());
-		_gazeSpotlight = GameObject.FindGameObjectWithTag("Projector").GetComponent<Transform>();
-	}
-
-	void Update()
-	{
-
+		_gazeSpotlight = GameObject.FindGameObjectWithTag("Projector").GetComponent<Projector>();
 	}
 
 	void AdjustBounds()
 	{
-		GirlGazeAngle = 120f;
+		_currentTransformRotation = transform.eulerAngles;
+		_currentTransformRotation.y = Mathf.Clamp(_currentTransformRotation.y, -360, 360);
+		transform.rotation = Quaternion.Euler(_currentTransformRotation);
 		if (_camController.ComputerCamEnabled)
 		{
 			GirlGazeRadius = Mathf.Abs(CameraTransform[0].position.z - transform.position.z)
 			                 + Mathf.Abs(CameraTransform[0].position.x - transform.position.x) / 2;
+			_minAngleBound = 90;
+			_maxAngleBound = 180;
+			_minNegativeBound = -270;
+			_maxNegativeBound = -180;
 		}
 
 		if (_camController.PhoneCamEnabled)
 		{
 			GirlGazeRadius = Mathf.Abs(CameraTransform[1].position.z - transform.position.z)
 			 + Mathf.Abs(CameraTransform[1].position.x - transform.position.x)/2;
+			_minAngleBound = 90;
+			_maxAngleBound = 270;
+			_minNegativeBound = -270;
+			_maxNegativeBound = -90;
 		}
 
 		if (_camController.EchoCamEnabled)
 		{
 			GirlGazeRadius = Mathf.Abs(CameraTransform[2].position.z - transform.position.z)
 			                 + Mathf.Abs(CameraTransform[2].position.x - transform.position.x)/2;
+			_minAngleBound = 0;
+			_maxAngleBound = 90;
+			_minNegativeBound = -270;
+			_maxNegativeBound = 0;
 		}
+	}
 
-		//_gazeSpotlight.orthographicSize = GirlGazeRadius;
-		//_gazeSpotlight.orthographicSize = GirlGazeAngle - GirlGazeRadius;
-		_gazeSpotlight.localScale = new Vector3(2.86f,2.86f,GirlGazeRadius/4);
-		//_gazeSpotlight.aspectRatio = 2*(Mathf.Deg2Rad * GirlGazeRadius);
-		//smallest value 10, 1.27
-		//max value 1.4 & 30
+	private void GazeResizing(float yRot)
+	{
+		_gazeSpotlight.orthographicSize = GirlGazeRadius;
+		if (yRot > _minAngleBound && yRot < _maxAngleBound || yRot > _minNegativeBound && yRot < _maxNegativeBound)
+		{
+			GirlGazeAngle = 45;
+			_gazeSpotlight.aspectRatio = _gazeSpotlight.orthographicSize / (2*GirlGazeAngle);
+		}
+		else
+		{
+			GirlGazeAngle = 120;
+			_gazeSpotlight.aspectRatio = 1;
+		}
 	}
 
 	private void FixedUpdate()
 	{
 		DetectCamera();
+		GazeResizing(_currentTransformRotation.y);
 	}
 
 	private void DetectCamera()
 	{
-		//VisibilityList.Clear();
         AdjustBounds();
 		for (int i = 0; i < DeviceLayerMask.Length; i++)
 		{
@@ -82,7 +101,6 @@ public class girlGaze : MonoBehaviour
 					RaycastHit bulletHit;
 					List<Collider> colliders = new List<Collider>();
 					colliders.AddRange(Physics.OverlapSphere(transform.position, GirlGazeRadius, BulletLayerMask));
-					//Collider[] bulletColliders = Physics.OverlapSphere(transform.position, GirlGazeRadius, BulletLayerMask);
 					for (int j = 0; j < colliders.Count; j++)
 					{
 						var bulletTran = colliders[j].gameObject.transform;
@@ -111,56 +129,8 @@ public class girlGaze : MonoBehaviour
 				}
 			}
 
-			/*else
-			{
-				_camSwitch.DeviceTriggered[_camSwitch.CurrentMaterialIndex] = false;
-			}*/
 		}
 
-
-		/*if (Physics.Raycast(girlRay, out compOnHit,rayDist, compCamLayerMask))
-		{
-			if (_camSwitch.CurrentMaterialIndex == 0)
-			{
-				_camSwitch.CompTriggered = true;
-			}
-		}
-		if (!Physics.Raycast(girlRay, out compOnHit,rayDist, compCamLayerMask))
-		{
-			if (_camSwitch.CurrentMaterialIndex == 0)
-			{
-				_camSwitch.CompTriggered = false;
-			}
-		}
-		if (Physics.Raycast(girlRay, out phoneOnHit,rayDist, phoneCamLayerMask))
-		{
-	
-			if (_camSwitch.CurrentMaterialIndex == 1)
-			{
-				_camSwitch.PhoneTriggered = true;
-			}
-		}
-		if (!Physics.Raycast(girlRay, out phoneOnHit,rayDist, phoneCamLayerMask))
-		{
-			if (_camSwitch.CurrentMaterialIndex == 1)
-			{
-				_camSwitch.PhoneTriggered = false;
-			}
-		}
-		if (Physics.Raycast(girlRay, out echoOnHit,rayDist, echoCamLayerMask))
-		{
-			if (_camSwitch.CurrentMaterialIndex == 2)
-			{
-				_camSwitch.EchoTriggered = true;
-			}
-		}
-		if (!Physics.Raycast(girlRay, out echoOnHit,rayDist, echoCamLayerMask))
-		{
-			if (_camSwitch.CurrentMaterialIndex == 2)
-			{
-				_camSwitch.EchoTriggered = false;
-			}
-		}*/
 	}
 
 
