@@ -6,7 +6,11 @@ using UnityEngine.XR.WSA;
 public class EnemyBehavior : MonoBehaviour
 {
 	public GameObject mainCharacter;
-	// Use this for initialization
+    // Use this for initialization
+
+    Material mat;
+
+    public Color afterHit;
 
 	public bool alive = true;
 
@@ -20,14 +24,16 @@ public class EnemyBehavior : MonoBehaviour
 		mainCharacter = GameObject.Find("Girl");
 		speed = Random.RandomRange(.7f, 1.5f);
 		movementType = Random.Range(0, 3);
-		
-	}
+        mat = GetComponentInChildren<Renderer>().material;
+
+    }
 	
 	// Update is called once per frame
 	void Update ()
 	{
 		if (alive)
 		{
+		transform.LookAt(mainCharacter.transform);
 			if (movementType == 0)
 			{
 				transform.LookAt(mainCharacter.transform);
@@ -69,6 +75,7 @@ public class EnemyBehavior : MonoBehaviour
 		{
 			GetComponent<Rigidbody>().useGravity = true;
 			alive = false;
+            mat.color = afterHit;
 		}
 	}
 }

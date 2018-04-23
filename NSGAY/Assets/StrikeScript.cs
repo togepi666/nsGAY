@@ -32,7 +32,7 @@ public class StrikeScript : MonoBehaviour {
         }
         if (strikes == 0)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
         }
 	}
 
