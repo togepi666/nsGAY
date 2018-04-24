@@ -78,4 +78,5 @@ public class EnemyBehavior : MonoBehaviour
             mat.color = afterHit;
 		}
 	}
+    
 }
