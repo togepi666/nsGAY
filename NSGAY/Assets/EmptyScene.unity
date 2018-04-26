@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45095485, g: 0.50082886, b: 0.5744328, a: 1}
+  m_IndirectSpecularColor: {r: 0.45095468, g: 0.5008286, b: 0.57443243, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -220,7 +220,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &33982257 stripped
 GameObject:
@@ -816,7 +816,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4d8a42622048a01418ba49c91c0b3af4, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4d8a42622048a01418ba49c91c0b3af4, type: 3}
       propertyPath: m_LocalScale.x
@@ -994,7 +994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85432d9f416bd2b4cbb7ffa26e412ea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1066405940808498, guid: 4f341066138c08f4b8b6ad070bf6ee1b, type: 2}
+  bullet: {fileID: 1474688761459498, guid: 4f341066138c08f4b8b6ad070bf6ee1b, type: 2}
   designatedCamera: 1
   cameraObject: {fileID: 988082729}
 --- !u!1 &437505710
@@ -2269,7 +2269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85432d9f416bd2b4cbb7ffa26e412ea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1066405940808498, guid: 4f341066138c08f4b8b6ad070bf6ee1b, type: 2}
+  bullet: {fileID: 1474688761459498, guid: 4f341066138c08f4b8b6ad070bf6ee1b, type: 2}
   designatedCamera: 0
   cameraObject: {fileID: 615729560}
 --- !u!1 &1232123125
@@ -2421,7 +2421,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cda0e8d3d29d97e43a9590cae8bfe939, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: cda0e8d3d29d97e43a9590cae8bfe939, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2849,7 +2849,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85432d9f416bd2b4cbb7ffa26e412ea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1066405940808498, guid: 4f341066138c08f4b8b6ad070bf6ee1b, type: 2}
+  bullet: {fileID: 1474688761459498, guid: 4f341066138c08f4b8b6ad070bf6ee1b, type: 2}
   designatedCamera: 2
   cameraObject: {fileID: 847170939}
 --- !u!1 &1595032380
@@ -3460,7 +3460,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: -65.132, y: -348.884, z: -138.39}
 --- !u!1 &2018705409
 GameObject:
