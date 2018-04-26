@@ -44,9 +44,9 @@ public class GeneralThings : MonoBehaviour {
 
 			if (timer.GetComponent<Timer>().timer > 10)
 			{
-				if (difficulty < 2)
+				if (difficulty >0)
 				{
-					difficulty += .4f;
+					difficulty -= .4f;
 				}
 			}
 		}
