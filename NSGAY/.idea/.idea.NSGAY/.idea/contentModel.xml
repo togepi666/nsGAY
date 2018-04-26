@@ -17,6 +17,7 @@
         <e p="girlGaze.cs" t="Include" />
         <e p="LineOfSightMesh.cs" t="Include" />
         <e p="menuScreen.cs" t="Include" />
+        <e p="MeshResizing.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="Editor" t="Include">
             <e p="JetBrains" t="Include">
@@ -27,6 +28,7 @@
         <e p="ScoringScript.cs" t="Include" />
         <e p="Shaders" t="Include">
           <e p="Multiply.shader" t="Include" />
+          <e p="ProjectionShader.shader" t="Include" />
           <e p="PRojectMe.shader" t="Include" />
         </e>
         <e p="Shooting.cs" t="Include" />

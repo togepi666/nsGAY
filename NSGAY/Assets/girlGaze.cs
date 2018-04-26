@@ -25,7 +25,7 @@ public class girlGaze : MonoBehaviour
 	private void Start()
 	{
 		_camController = GameObject.FindGameObjectWithTag("CameraController").GetComponent<CameraSwitching>();
-		_gazeSpotlight = GameObject.FindGameObjectWithTag("Projector").GetComponent<Projector>();
+		//_gazeSpotlight = GameObject.FindGameObjectWithTag("Projector").GetComponent<Projector>();
 	}
 
 	void AdjustBounds()
@@ -75,7 +75,7 @@ public class girlGaze : MonoBehaviour
 		else
 		{
 			GirlGazeAngle = 120;
-			_gazeSpotlight.aspectRatio = 1;
+			_gazeSpotlight.aspectRatio = 2;
 		}
 	}
 
