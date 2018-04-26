@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
+//using UnityEditor;
 using UnityEngine;
 
 public class girlGaze : MonoBehaviour
@@ -151,7 +151,7 @@ private void OnDrawGizmos()
 	}
 }
 
-
+/*
 [CustomEditor(typeof(girlGaze))]
 public class drawSight : Editor
 {
@@ -174,4 +174,4 @@ public class drawSight : Editor
 		Handles.DrawLine(gazer.transform.position,gazer.transform.position+viewLineB *gazer.GirlGazeRadius);
 	}
 }
-
+*/
