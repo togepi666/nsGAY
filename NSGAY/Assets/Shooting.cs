@@ -5,7 +5,7 @@ using UnityEngine;
 public class Shooting : MonoBehaviour {
 
     public GameObject bullet;
-    private float speed = 110;
+    private float speed = 90;
     RaycastHit hit;
     public int designatedCamera;
     public Camera cameraObject;
