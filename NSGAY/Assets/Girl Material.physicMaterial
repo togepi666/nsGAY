@@ -6,8 +6,8 @@ PhysicMaterial:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Girl Material
-  dynamicFriction: 1.01
-  staticFriction: 0.24
+  dynamicFriction: 0.08
+  staticFriction: 0.15
   bounciness: 1
   frictionCombine: 0
   bounceCombine: 0
