@@ -6,7 +6,17 @@ Shader "Projector/MeshTexture" {
     Properties {      
         _ShadowTex ("Cookie", 2D) = "" {}      
     }
- 
+ /*Subshader {
+	Tags { "RenderType" = "Transparent"}
+	Pass{
+	Name "OUTLINE"
+	Cull Front
+	ZWrite Off
+	ColorMask RGB
+	Blend SrcAlpha OneMinusSrcAlpha
+	
+	}
+	}*/
     Subshader {
         Tags {"Queue"="Transparent"}
         Pass {
@@ -14,8 +24,7 @@ Shader "Projector/MeshTexture" {
             ColorMask RGBA
             Blend SrcAlpha OneMinusSrcAlpha 
             Offset -1, -1
- 
-            CGPROGRAM
+ CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag          
             #include "UnityCG.cginc"
@@ -44,6 +53,7 @@ Shader "Projector/MeshTexture" {
                 return texS;
             }
             ENDCG
+            
         }
     }
 }
