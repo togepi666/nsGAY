@@ -22,7 +22,7 @@ public class MeshResizing : MonoBehaviour
 	void Update ()
 	{
 		
-		ProjectedMesh.transform.localScale = new Vector3(_gaze.GirlGazeRadius/16,ProjectedMesh.transform.localScale.y,_gaze.GirlGazeRadius/16);
+		ProjectedMesh.transform.localScale = new Vector3(_gaze.GirlGazeRadius/5,ProjectedMesh.transform.localScale.y,_gaze.GirlGazeRadius/5);
 		_projectCam.orthographicSize = _gaze.GirlGazeRadius;
 		_meshProjector.orthographicSize = _gaze.GirlGazeRadius;
 	}

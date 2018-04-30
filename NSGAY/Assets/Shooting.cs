@@ -36,7 +36,7 @@ public class Shooting : MonoBehaviour {
                        bullet.transform.LookAt(hit.point);
                 newBullet.GetComponent<Rigidbody>().velocity = ((hit.point - cameraObject.transform.position).normalized)* speed;
                     Debug.Log(newBullet.GetComponent<Rigidbody>().velocity);
-                    Debug.Log(newBullet.GetComponent<Rigidbody>().velocity);
+                  //  Debug.Log(newBullet.GetComponent<Rigidbody>().velocity);
                     Debug.Log(speed);
 
                     if (hit.collider.CompareTag("Enemy"))

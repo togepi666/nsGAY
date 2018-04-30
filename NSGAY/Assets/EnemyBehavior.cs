@@ -7,7 +7,7 @@ public class EnemyBehavior : MonoBehaviour
 {
 	public GameObject mainCharacter;
     // Use this for initialization
-
+	public GameObject explosion;
     Material mat;
 
     public Color afterHit;
@@ -18,14 +18,14 @@ public class EnemyBehavior : MonoBehaviour
 
 	public float currentTime = 0;
 
-	public int movementType;
+	public int movementType = 0;
 	// Use this for initialization
 	void Start () {
+
 		mainCharacter = GameObject.Find("Girl");
 		speed = Random.RandomRange(.7f, 1.5f);
-		movementType = Random.Range(0, 3);
         mat = GetComponentInChildren<Renderer>().material;
-
+		explosion = Resources.Load("ExplosionParticles") as GameObject;
     }
 	
 	// Update is called once per frame
@@ -38,13 +38,14 @@ public class EnemyBehavior : MonoBehaviour
 			{
 				transform.LookAt(mainCharacter.transform);
 				transform.position = Vector3.MoveTowards(transform.position, mainCharacter.transform.position, 0.03f*speed);
-				transform.position = new Vector3(transform.position.x +Mathf.Sin(Time.time*2) *.1f, transform.position.y+Mathf.Sin(Time.time*2) *.1f,transform.position.z);
 			
+				
 			}
 			if (movementType == 1)
 			{
 				transform.LookAt(mainCharacter.transform);
 				transform.position = Vector3.MoveTowards(transform.position, mainCharacter.transform.position, 0.03f*speed);
+				transform.position = new Vector3(transform.position.x +Mathf.Sin(Time.time*2 + 1) *.1f, transform.position.y+Mathf.Sin(Time.time*2) *.1f,transform.position.z);
 			
 			}
 
@@ -60,8 +61,7 @@ public class EnemyBehavior : MonoBehaviour
 		else
 		{
 			currentTime += Time.deltaTime;
-			transform.localScale /= 1.05f;
-			if (currentTime > 4)
+			if (currentTime > 2)
 			{
 				Destroy(gameObject);
 			}
@@ -73,9 +73,15 @@ public class EnemyBehavior : MonoBehaviour
 	{
 		if (other.gameObject.CompareTag("Bullet"))
 		{
+			Debug.Log("Should be dead.");
+			//Add code to change which particle effect to play. Currently too big for other alien.
+			GameObject boom = Instantiate(explosion, this.transform.position, Quaternion.identity) as GameObject;
+			boom.transform.SetParent(this.transform);
 			GetComponent<Rigidbody>().useGravity = true;
 			alive = false;
-            mat.color = afterHit;
+			//GetComponent<ParticleSystem>().enableEmission = true;
+
+			mat.color = afterHit;
 		}
 	}
     
