@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 public class girlGaze : MonoBehaviour
@@ -18,7 +17,6 @@ public class girlGaze : MonoBehaviour
 	private float _minAngleBound,_maxAngleBound;
 	private float _minNegativeBound, _maxNegativeBound;
 	private CameraSwitching _camController;
-	[SerializeField]private Projector _gazeSpotlight;
 	private List<Transform> _bulletTransforms;
 	private Vector3 _currentTransformRotation;
 
@@ -37,52 +35,26 @@ public class girlGaze : MonoBehaviour
 		{
 			GirlGazeRadius = Mathf.Abs(CameraTransform[0].position.z - transform.position.z)
 			                 + Mathf.Abs(CameraTransform[0].position.x - transform.position.x) / 2;
-			_minAngleBound = 90;
-			_maxAngleBound = 180;
-			_minNegativeBound = -270;
-			_maxNegativeBound = -180;
 		}
 
 		if (_camController.PhoneCamEnabled)
 		{
 			GirlGazeRadius = Mathf.Abs(CameraTransform[1].position.z - transform.position.z)
 			 + Mathf.Abs(CameraTransform[1].position.x - transform.position.x)/2;
-			_minAngleBound = 90;
-			_maxAngleBound = 270;
-			_minNegativeBound = -270;
-			_maxNegativeBound = -90;
 		}
 
 		if (_camController.EchoCamEnabled)
 		{
 			GirlGazeRadius = Mathf.Abs(CameraTransform[2].position.z - transform.position.z)
 			                 + Mathf.Abs(CameraTransform[2].position.x - transform.position.x)/2;
-			_minAngleBound = 0;
-			_maxAngleBound = 90;
-			_minNegativeBound = -270;
-			_maxNegativeBound = 0;
 		}
 	}
 
-	private void GazeResizing(float yRot)
-	{
-		_gazeSpotlight.orthographicSize = GirlGazeRadius;
-		if (yRot > _minAngleBound && yRot < _maxAngleBound || yRot > _minNegativeBound && yRot < _maxNegativeBound)
-		{
-			GirlGazeAngle = 45;
-			_gazeSpotlight.aspectRatio = _gazeSpotlight.orthographicSize / (2*GirlGazeAngle);
-		}
-		else
-		{
-			GirlGazeAngle = 120;
-			_gazeSpotlight.aspectRatio = 2;
-		}
-	}
+	
 
 	private void FixedUpdate()
 	{
 		DetectCamera();
-		GazeResizing(_currentTransformRotation.y);
 	}
 
 	private void DetectCamera()
@@ -152,26 +124,5 @@ private void OnDrawGizmos()
 }
 
 
-[CustomEditor(typeof(girlGaze))]
-public class drawSight : Editor
-{
-	private GameObject _camObj;
-	private CameraSwitching _cam;
 
-	private void OnEnable()
-	{
-		_camObj = GameObject.FindGameObjectWithTag("CameraController");
-		_cam = _camObj.GetComponent<CameraSwitching>();
-	}
-	private void OnSceneGUI()
-	{
-		Handles.color = Color.magenta;
-		girlGaze gazer = (girlGaze) target;
-		Handles.DrawWireArc(gazer.transform.position,Vector3.up,Vector3.forward, 360,gazer.GirlGazeRadius);
-		Vector3 viewLineA = gazer.FindCurrentAngle(-gazer.GirlGazeAngle / 2,false);
-		Vector3 viewLineB = gazer.FindCurrentAngle(gazer.GirlGazeAngle / 2,false);
-		Handles.DrawLine(gazer.transform.position,gazer.transform.position+viewLineA *gazer.GirlGazeRadius);
-		Handles.DrawLine(gazer.transform.position,gazer.transform.position+viewLineB *gazer.GirlGazeRadius);
-	}
-}
 

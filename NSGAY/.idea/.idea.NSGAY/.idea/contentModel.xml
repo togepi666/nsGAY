@@ -15,7 +15,6 @@
         <e p="GeneralThings.cs" t="Include" />
         <e p="girlAI.cs" t="Include" />
         <e p="girlGaze.cs" t="Include" />
-        <e p="LineOfSightMesh.cs" t="Include" />
         <e p="LinkedSet.cs" t="Include" />
         <e p="menuScreen.cs" t="Include" />
         <e p="MeshResizing.cs" t="Include" />
@@ -31,8 +30,6 @@
         <e p="ScoringScript.cs" t="Include" />
         <e p="Shaders" t="Include">
           <e p="Multiply.shader" t="Include" />
-          <e p="OutlineBufferShader.shader" t="Include" />
-          <e p="OutlineShader.shader" t="Include" />
           <e p="ProjectionShader.shader" t="Include" />
           <e p="PRojectMe.shader" t="Include" />
         </e>

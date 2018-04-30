@@ -18,7 +18,7 @@ public class girlAI : MonoBehaviour
 	void Start ()
 	{
 		interval = 0;
-		girlMotion = 9f;
+		girlMotion = 2f;
 		locations= new Vector3[5];
 		locations[0] = new Vector3(0,3,0);
 		locations[1] = new Vector3(5,3,5);

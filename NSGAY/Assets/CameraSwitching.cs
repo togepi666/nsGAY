@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VR;
 
 public class CameraSwitching : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class CameraSwitching : MonoBehaviour
 	public bool ComputerCamEnabled, PhoneCamEnabled, EchoCamEnabled;
 	public Camera DeskCamera, PhoneCamera, EchoCamera;
 	private AudioSource _changeSound;
+	private bool _myBool = false;
 	private Rect _mainScreen = new Rect(0,0,0.65f,1);
 	private Rect _screen2 = new Rect(0.65f,0.5f,0.35f,0.5f);
 	private Rect _screen3 = new Rect(0.65f,0,0.35f,0.5f);
@@ -18,17 +20,39 @@ public class CameraSwitching : MonoBehaviour
 	}
 
 	void Update () {
-		if (Input.GetKeyDown(",") || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+		if (Input.GetAxis("Mouse ScrollWheel") == 0 && _myBool)
+		{
+			_changeSound.PlayOneShot(_changeSound.clip);
+			_myBool = false;
+		}
+		if (Input.GetAxis("Mouse ScrollWheel") >= 0.1 && !_myBool)
+		{
+			_myBool = true;
+			CurrentMaterialIndex--;
+
+			//_changeSound.PlayOneShot(_changeSound.clip);
+			//_myBool = false;
+		}
+
+		if (Input.GetAxis("Mouse ScrollWheel") <= -0.1 && !_myBool)
+		{
+			_myBool = true;
+			CurrentMaterialIndex++;
+
+			//_changeSound.PlayOneShot(_changeSound.clip);
+			//_myBool = false;
+		}
+		/*if (Input.GetKeyDown(",") || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
 		{
 			CurrentMaterialIndex--;
 			_changeSound.PlayOneShot(_changeSound.clip);
-		}
+		}*/
 
-		if (Input.GetKeyDown(".") || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+		/*if (Input.GetKeyDown(".") || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
 		{
 			CurrentMaterialIndex++;
 			_changeSound.PlayOneShot(_changeSound.clip);
-		}
+		}*/
 		switch (CurrentMaterialIndex)
 		{
 			default:
