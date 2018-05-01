@@ -9,6 +9,8 @@ public class Shooting : MonoBehaviour {
     RaycastHit hit;
     public int designatedCamera;
     public Camera cameraObject;
+    AudioSource audio;
+    public AudioClip bang;
 
     void Start()
     {
@@ -20,13 +22,14 @@ public class Shooting : MonoBehaviour {
         RaycastHit hit;
         Vector3 startPoint = new Vector3(0, 0, 0);
         Ray ray = cameraObject.ScreenPointToRay(Input.mousePosition);
+        audio = GetComponent<AudioSource>();
        
 
         if (GameObject.Find("Controller").GetComponent<CameraSwitching>().CurrentMaterialIndex == designatedCamera)
         {
             if (Input.GetMouseButtonDown(0))
             {
-
+                audio.PlayOneShot(bang);
                 if (Physics.Raycast(ray, out hit, 400.0f))
                 {
                 Debug.DrawLine(ray.origin, hit.point, Color.red);

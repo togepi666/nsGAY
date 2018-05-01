@@ -19,6 +19,9 @@ public class EnemyBehavior : MonoBehaviour
 	public float currentTime = 0;
 
 	public int movementType = 0;
+
+    AudioSource audio;
+    public AudioClip ouch;
 	// Use this for initialization
 	void Start () {
 
@@ -31,6 +34,7 @@ public class EnemyBehavior : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+        audio = GetComponent<AudioSource>();
 		if (alive)
 		{
 		transform.LookAt(mainCharacter.transform);
@@ -73,6 +77,10 @@ public class EnemyBehavior : MonoBehaviour
 	{
 		if (other.gameObject.CompareTag("Bullet"))
 		{
+            if (alive)
+            {
+                audio.PlayOneShot(ouch);
+            }
 			Debug.Log("Should be dead.");
 			//Add code to change which particle effect to play. Currently too big for other alien.
 			GameObject boom = Instantiate(explosion, this.transform.position, Quaternion.identity) as GameObject;
