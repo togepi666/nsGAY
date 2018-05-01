@@ -9,6 +9,7 @@ MonoImporter:
   - mainCharacter: {instanceID: 0}
   - explosion: {fileID: 1815457408836602, guid: 4946fff99ac784940b8d4a368c42eb7b,
       type: 2}
+  - ouch: {fileID: 8300000, guid: 3b11998b8828fe54cbe5882479b017bb, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
