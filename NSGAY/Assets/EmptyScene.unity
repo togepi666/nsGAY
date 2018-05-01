@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45095468, g: 0.5008286, b: 0.57443243, a: 1}
+  m_IndirectSpecularColor: {r: 0.4509551, g: 0.50082904, b: 0.57443345, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -3701,7 +3701,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies: {fileID: 1640901813988060, guid: 3e5b67ec9609a7d4cb9a3954dff84f2c, type: 2}
-  enemyType2: {fileID: 1614225730372080, guid: 9541991d864ccad4783790b77217653d, type: 2}
+  enemyType2: {fileID: 1945654807836420, guid: dd8550522fa72c749b1aa275fe81dcc3, type: 2}
   mainCharacter: {fileID: 0}
   spawnArea1: {fileID: 335513320}
   spawnArea2: {fileID: 2098524182}

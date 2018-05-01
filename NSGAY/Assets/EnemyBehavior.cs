@@ -19,6 +19,10 @@ public class EnemyBehavior : MonoBehaviour
 	public float currentTime = 0;
 
 	public int movementType = 0;
+
+	public int EnemyType;
+
+	private float _yMultiplier = 1;
 	// Use this for initialization
 	void Start () {
 
@@ -33,11 +37,15 @@ public class EnemyBehavior : MonoBehaviour
 	{
 		if (alive)
 		{
+			if (EnemyType == 1)
+			{
+				_yMultiplier = 0.01f;
+			}
 		transform.LookAt(mainCharacter.transform);
 			if (movementType == 0)
 			{
 				transform.LookAt(mainCharacter.transform);
-				transform.position = Vector3.MoveTowards(transform.position, mainCharacter.transform.position, 0.03f*speed);
+				transform.position = Vector3.MoveTowards(transform.position, mainCharacter.transform.position, _yMultiplier*speed);
 			
 				
 			}
@@ -73,14 +81,21 @@ public class EnemyBehavior : MonoBehaviour
 	{
 		if (other.gameObject.CompareTag("Bullet"))
 		{
+			if (EnemyType == 0)
+			{
+				GetComponent<Rigidbody>().useGravity = true;
+			}
+
+			else
+			{
+				transform.GetChild(0).gameObject.GetComponent<Rigidbody>().drag = 0;
+			}
 			Debug.Log("Should be dead.");
 			//Add code to change which particle effect to play. Currently too big for other alien.
 			GameObject boom = Instantiate(explosion, this.transform.position, Quaternion.identity) as GameObject;
-			boom.transform.SetParent(this.transform);
-			GetComponent<Rigidbody>().useGravity = true;
+			boom.transform.SetParent(this.transform);	
 			alive = false;
 			//GetComponent<ParticleSystem>().enableEmission = true;
-
 			mat.color = afterHit;
 		}
 	}
