@@ -13,7 +13,8 @@ public class GeneralThings : MonoBehaviour {
 	public GameObject spawnArea3;
 	public GameObject timer;
 	public GameObject explosion;
-	public float score = 0;
+    public int score;
+    public GameObject scoreKeeper;
     public float difficulty = .02f;
 	public float currentTime;
 	public float timer2 = 0;
@@ -62,7 +63,7 @@ public class GeneralThings : MonoBehaviour {
 		}
 		if (timer != null)
 		{
-			score = timer.GetComponent<Timer>().timer;
+			score = scoreKeeper.GetComponent<ScoringScript>().score;
 		}
 
 	}

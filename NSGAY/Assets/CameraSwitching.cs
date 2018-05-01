@@ -42,17 +42,17 @@ public class CameraSwitching : MonoBehaviour
 			//_changeSound.PlayOneShot(_changeSound.clip);
 			//_myBool = false;
 		}
-		/*if (Input.GetKeyDown(",") || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+		if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
 		{
 			CurrentMaterialIndex--;
 			_changeSound.PlayOneShot(_changeSound.clip);
-		}*/
+		}
 
-		/*if (Input.GetKeyDown(".") || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+		if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
 		{
 			CurrentMaterialIndex++;
 			_changeSound.PlayOneShot(_changeSound.clip);
-		}*/
+		}
 		switch (CurrentMaterialIndex)
 		{
 			default:
