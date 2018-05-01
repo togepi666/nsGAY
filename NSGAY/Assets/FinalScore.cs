@@ -16,9 +16,10 @@ public class FinalScore : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-       // score = GameObject.Find("timer").GetComponent<Timer>().timer;
-        GetComponent<Text>().text = "Time: " + score.ToString("#.00");
+
+        // score = GameObject.Find("timer").GetComponent<Timer>().timer;
+        // GetComponent<Text>().text = "Time: " + score.ToString("#.00");
+        GetComponent<Text>().text = "Score: " + score;
 
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
