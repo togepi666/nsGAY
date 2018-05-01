@@ -37,15 +37,11 @@ public class EnemyBehavior : MonoBehaviour
 	{
 		if (alive)
 		{
-			if (EnemyType == 1)
-			{
-				_yMultiplier = 0.01f;
-			}
 		transform.LookAt(mainCharacter.transform);
 			if (movementType == 0)
 			{
 				transform.LookAt(mainCharacter.transform);
-				transform.position = Vector3.MoveTowards(transform.position, mainCharacter.transform.position, _yMultiplier*speed);
+				transform.position = Vector3.MoveTowards(transform.position, mainCharacter.transform.position, 0.03f*speed);
 			
 				
 			}
