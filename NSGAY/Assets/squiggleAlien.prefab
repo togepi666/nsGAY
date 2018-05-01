@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 54449118481122364}
   - component: {fileID: 135232592970667288}
   - component: {fileID: 144903480277871082}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: tentacle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 54993274606232938}
   - component: {fileID: 135276401260093256}
   - component: {fileID: 144787965375988026}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: joint9 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 54235657309157724}
   - component: {fileID: 135654348343321564}
   - component: {fileID: 144341060809884948}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: joint9 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 54668849903026758}
   - component: {fileID: 135420298499099364}
   - component: {fileID: 144449087924245430}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: tentacle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 54621784234650718}
   - component: {fileID: 135177679055609430}
   - component: {fileID: 144814626586119302}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: joint9 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 54984648931161794}
   - component: {fileID: 135337689705884496}
   - component: {fileID: 144991134864243068}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: joint9 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 54620128564619482}
   - component: {fileID: 135427502320726352}
   - component: {fileID: 144534309757831304}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: bottom_center
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +313,7 @@ GameObject:
   - component: {fileID: 54784509199688292}
   - component: {fileID: 135556639665126660}
   - component: {fileID: 144598303279246964}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: tentacle6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,7 +346,7 @@ GameObject:
   - component: {fileID: 54787066985357130}
   - component: {fileID: 135059799785537530}
   - component: {fileID: 144393828866186382}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: joint9 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -364,7 +364,7 @@ GameObject:
   - component: {fileID: 54890680231527848}
   - component: {fileID: 135956866797010328}
   - component: {fileID: 144452421107649364}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: tentacle5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 54191843970007110}
   - component: {fileID: 135141353479557034}
   - component: {fileID: 144530253471079924}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: joint9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -415,7 +415,7 @@ GameObject:
   - component: {fileID: 54197371683196980}
   - component: {fileID: 135699421144350918}
   - component: {fileID: 144402741878725102}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: tentacle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -433,7 +433,7 @@ GameObject:
   - component: {fileID: 54772623562896358}
   - component: {fileID: 135750590311786530}
   - component: {fileID: 144253904263630580}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: joint9 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -451,7 +451,7 @@ GameObject:
   - component: {fileID: 54722557225390588}
   - component: {fileID: 135081986120002028}
   - component: {fileID: 144518128159605768}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: tentacle7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -469,7 +469,7 @@ GameObject:
   - component: {fileID: 54858256704793380}
   - component: {fileID: 135167277450037894}
   - component: {fileID: 144457700294135200}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: joint9 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -487,7 +487,7 @@ GameObject:
   - component: {fileID: 54322054191517714}
   - component: {fileID: 135350990935324960}
   - component: {fileID: 144090315263598824}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: tentacle9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -503,6 +503,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4795893652062062}
   - component: {fileID: 54148434159252224}
+  - component: {fileID: 135889237657629180}
+  - component: {fileID: 114358056406904742}
   m_Layer: 0
   m_Name: center
   m_TagString: Untagged
@@ -521,7 +523,7 @@ GameObject:
   - component: {fileID: 54432579136713802}
   - component: {fileID: 135294966908058148}
   - component: {fileID: 144048445992737192}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: tentacle8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -539,7 +541,7 @@ GameObject:
   - component: {fileID: 54119420511376952}
   - component: {fileID: 135088014518495998}
   - component: {fileID: 144501628303794952}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: joint9 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -572,7 +574,7 @@ GameObject:
   - component: {fileID: 54780301261320880}
   - component: {fileID: 135066696747669782}
   - component: {fileID: 144578606803125694}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: joint9 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -666,7 +668,7 @@ GameObject:
   - component: {fileID: 54380661979853280}
   - component: {fileID: 135516867602457176}
   - component: {fileID: 144063086551182412}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: tentacle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -682,7 +684,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4278788378829124}
   - component: {fileID: 95668618470354356}
-  m_Layer: 0
+  - component: {fileID: 135333455772866298}
+  - component: {fileID: 114546958432280324}
+  - component: {fileID: 114974455374855284}
+  m_Layer: 14
   m_Name: squiggleAlien
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -700,7 +705,7 @@ GameObject:
   - component: {fileID: 54145654720920694}
   - component: {fileID: 135930831798071450}
   - component: {fileID: 144945862858492890}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: tentacle10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -961,8 +966,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1945654807836420}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.03, y: 9.83, z: 5.99}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -3.5, y: 7, z: 8.47}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 4795893652062062}
   - {fileID: 4813644538667640}
@@ -1392,10 +1397,10 @@ Rigidbody:
   m_Mass: 100
   m_Drag: 100
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!54 &54191843970007110
 Rigidbody:
@@ -1699,6 +1704,47 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114358056406904742
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1728788067058674}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5366e996d9eadc446992452f95c2c5c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114546958432280324
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1945654807836420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8daade334e3ff547b9bc84c100efc94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCharacter: {fileID: 0}
+  explosion: {fileID: 1815457408836602, guid: 4946fff99ac784940b8d4a368c42eb7b, type: 2}
+  afterHit: {r: 0, g: 0, b: 0, a: 0}
+  alive: 1
+  speed: 5
+  currentTime: 0
+  movementType: 0
+  EnemyType: 1
+--- !u!114 &114974455374855284
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1945654807836420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5366e996d9eadc446992452f95c2c5c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135059799785537530
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -1819,6 +1865,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.12
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &135333455772866298
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1945654807836420}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 6.5
+  m_Center: {x: 0, y: 2, z: 0}
 --- !u!135 &135337689705884496
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -1927,6 +1985,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &135889237657629180
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1728788067058674}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 6.5
+  m_Center: {x: 0, y: 2, z: 0}
 --- !u!135 &135930831798071450
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -2049,7 +2119,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.54864466, y: -0.35065174, z: -0.26087958}
+  m_ConnectedAnchor: {x: 0.5486448, y: -0.35065174, z: -0.26087958}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -2181,7 +2251,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.9876699, y: -0.07008958, z: 0.08033936}
+  m_ConnectedAnchor: {x: -0.98766947, y: -0.0700894, z: 0.08033885}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -2269,7 +2339,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.98766947, y: -0.07008952, z: 0.08033933}
+  m_ConnectedAnchor: {x: -0.9876692, y: -0.070089936, z: 0.08033896}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -2313,7 +2383,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.5124046, y: -0.38739967, z: -0.07325317}
+  m_ConnectedAnchor: {x: -0.51240486, y: -0.38739967, z: -0.07325366}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -2357,7 +2427,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.11967678, y: -0.3392992, z: 0.5569611}
+  m_ConnectedAnchor: {x: 0.119676724, y: -0.3392992, z: 0.55696106}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -2401,7 +2471,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.38896853, y: -0.35065174, z: -0.41320336}
+  m_ConnectedAnchor: {x: -0.3889684, y: -0.35065174, z: -0.41320336}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -2577,7 +2647,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.9876697, y: -0.07008976, z: 0.08033922}
+  m_ConnectedAnchor: {x: -0.98766947, y: -0.07008904, z: 0.080339104}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -2621,7 +2691,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.010645648, y: -1.1906831, z: 0.01838382}
+  m_ConnectedAnchor: {x: -0.010645766, y: -1.1906831, z: 0.0183838}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -2709,7 +2779,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.08587052, y: -0.35065174, z: -0.55295575}
+  m_ConnectedAnchor: {x: -0.08587064, y: -0.35065174, z: -0.55295575}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -2753,7 +2823,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.9876694, y: -0.07008946, z: 0.080339134}
+  m_ConnectedAnchor: {x: -0.98766947, y: -0.0700894, z: 0.08033925}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -2797,7 +2867,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.9876689, y: -0.07008904, z: 0.08033918}
+  m_ConnectedAnchor: {x: -0.9876693, y: -0.07008922, z: 0.080339186}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -2841,7 +2911,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.5073086, y: -0.38739967, z: 0.25813866}
+  m_ConnectedAnchor: {x: -0.50730836, y: -0.38739967, z: 0.2581387}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -2885,7 +2955,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.4485914, y: -0.36208057, z: 0.4092841}
+  m_ConnectedAnchor: {x: 0.4485914, y: -0.36208057, z: 0.40928364}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -2929,7 +2999,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.987669, y: -0.07008928, z: 0.0803394}
+  m_ConnectedAnchor: {x: -0.98766893, y: -0.07008934, z: 0.08033948}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:

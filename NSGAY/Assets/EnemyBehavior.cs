@@ -8,6 +8,7 @@ public class EnemyBehavior : MonoBehaviour
 	public GameObject mainCharacter;
     // Use this for initialization
 	public GameObject explosion;
+	public GameObject explosionV2;
     Material mat;
 
     public Color afterHit;
@@ -29,6 +30,7 @@ public class EnemyBehavior : MonoBehaviour
 		speed = Random.RandomRange(.7f, 1.5f);
         mat = GetComponentInChildren<Renderer>().material;
 		explosion = Resources.Load("ExplosionParticles") as GameObject;
+		explosionV2 = Resources.Load("ExplosionParticlesV2") as GameObject;
     }
 	
 	// Update is called once per frame
@@ -83,8 +85,17 @@ public class EnemyBehavior : MonoBehaviour
             }
 			Debug.Log("Should be dead.");
 			//Add code to change which particle effect to play. Currently too big for other alien.
-			GameObject boom = Instantiate(explosion, this.transform.position, Quaternion.identity) as GameObject;
-			boom.transform.SetParent(this.transform);
+			if (movementType == 0)
+			{
+				GameObject boom = Instantiate(explosion, this.transform.position, Quaternion.identity) as GameObject;
+				boom.transform.SetParent(this.transform);
+			}
+			else
+			{
+				GameObject boom = Instantiate(explosionV2, this.transform.position, Quaternion.identity) as GameObject;
+				boom.transform.SetParent(this.transform);
+			}
+		
 			GetComponent<Rigidbody>().useGravity = true;
 			alive = false;
 			//GetComponent<ParticleSystem>().enableEmission = true;
