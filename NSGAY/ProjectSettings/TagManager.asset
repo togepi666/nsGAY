@@ -12,6 +12,7 @@ TagManager:
   - floor
   - Projector
   - EnemyDead
+  - PreTarget
   layers:
   - Default
   - TransparentFX
@@ -32,7 +33,7 @@ TagManager:
   - section
   - GirlModel
   - AlienTents
-  - 
+  - PreTarget
   - 
   - 
   - 
