@@ -7,7 +7,6 @@ public class GeneralThings : MonoBehaviour {
 	// Use this for initialization
 	public GameObject enemies;
 	public GameObject enemyType2;
-	public GameObject mainCharacter;
 	public GameObject spawnArea1;
 	public GameObject spawnArea2;
 	public GameObject spawnArea3;
@@ -22,9 +21,13 @@ public class GeneralThings : MonoBehaviour {
 	{
 		GameObject[] importants = GameObject.FindGameObjectsWithTag("Important");
 		{
-			if (importants.Length > 1)
+			if (spawnArea1 == null)
 			{
 				Destroy(gameObject);
+			}
+			if (importants.Length > 1)
+			{
+				Destroy(importants[0]);
 			}
 		}
 	}
@@ -32,6 +35,10 @@ public class GeneralThings : MonoBehaviour {
 	void Awake()
 	{
 		DontDestroyOnLoad(gameObject);
+		if (spawnArea1 == null)
+		{
+			Destroy(gameObject);
+		}
 	}
 	void Update()
 	{
