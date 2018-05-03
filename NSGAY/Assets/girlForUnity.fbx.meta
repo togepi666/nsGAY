@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 22292f708edc4214884103a13a27ffd2
-timeCreated: 1525050740
+guid: a7d5ae78d98d724419a04fbaf2358906
+timeCreated: 1525367500
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -39,13 +39,25 @@ ModelImporter:
     2100006: lambert6
     2100008: lambert4
     2100010: lambert7
+    2100012: orange
+    2100014: lambert8
     4300000: pCylinder4
     7400000: Walking
     7400002: GotHit
     7400004: BegoneThot
     9500000: //RootNode
     13700000: pCylinder4
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert2
+    second: {fileID: 2100000, guid: 3447dc9ea10751145ae9592c8c651115, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert8
+    second: {fileID: 2100000, guid: 2a2be186ec879154a9575e3261d00922, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -131,8 +143,8 @@ ModelImporter:
     - serializedVersion: 16
       name: BegoneThot
       takeName: BegoneThot
-      firstFrame: 49
-      lastFrame: 72
+      firstFrame: 73
+      lastFrame: 96
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
