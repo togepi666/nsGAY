@@ -709,6 +709,10 @@ Prefab:
       propertyPath: m_Name
       value: windowAnimated (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 054aac0848021f049ba77827896660a7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 054aac0848021f049ba77827896660a7, type: 3}
   m_IsPrefabParent: 0
