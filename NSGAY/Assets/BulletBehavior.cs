@@ -18,9 +18,10 @@ public class BulletBehavior : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update ()
-	{
+	{			Debug.Log("JustShot = " + justShot);
+
 		totalTime +=Time.deltaTime;
-		if (totalTime > .01f)
+		if (totalTime > .15f)
 		{
 			justShot = false;
 		}

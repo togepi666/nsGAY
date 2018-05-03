@@ -19,6 +19,7 @@ public class LineOfSightCollider : MonoBehaviour
 	{
 		if (other.gameObject.CompareTag("Bullet"))
 		{
+			if(other.gameObject.GetComponent<BulletBehavior>().justShot)
 			_gassy.gameObject.GetComponent<StrikeScript>().strikes--;
 		}
 		
