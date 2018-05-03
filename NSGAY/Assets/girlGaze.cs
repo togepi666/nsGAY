@@ -9,6 +9,7 @@ public class girlGaze : MonoBehaviour
 
 	public LayerMask BulletLayerMask;
 	public LayerMask[] DeviceLayerMask = new LayerMask[3];
+	public List<Transform> BulletPos = new List<Transform>();
 	public Transform[] CameraTransform = new Transform[3];
 
 
@@ -17,7 +18,7 @@ public class girlGaze : MonoBehaviour
 	private float _minAngleBound,_maxAngleBound;
 	private float _minNegativeBound, _maxNegativeBound;
 	private CameraSwitching _camController;
-	private List<Transform> _bulletTransforms;
+	private List<Transform> BulletTransforms;
 	private Vector3 _currentTransformRotation;
 
 	private void Start()
@@ -29,7 +30,7 @@ public class girlGaze : MonoBehaviour
 	void AdjustBounds()
 	{
 		_currentTransformRotation = transform.eulerAngles;
-		_currentTransformRotation.y = Mathf.Clamp(_currentTransformRotation.y, -360, 360);
+		_currentTransformRotation.y = Mathf.Clamp(_currentTransformRotation.y, 0, 360);
 		transform.rotation = Quaternion.Euler(_currentTransformRotation);
 		if (_camController.ComputerCamEnabled)
 		{
@@ -54,9 +55,10 @@ public class girlGaze : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		DetectCamera();
+		//DetectCamera();
 	}
 
+	
 	private void DetectCamera()
 	{
         AdjustBounds();
@@ -64,7 +66,7 @@ public class girlGaze : MonoBehaviour
 		{
 			Physics.OverlapSphere(transform.position, GirlGazeRadius, DeviceLayerMask[i]);
 			Vector3 _gazeDirection = (CameraTransform[i].position - transform.position).normalized;
-			if (Vector3.Angle(_gazeDirection, transform.forward) <= GirlGazeAngle / 2)
+			if (Vector3.Angle(_gazeDirection, transform.forward) <= GirlGazeAngle/2)
 			{
 				float rayDistance = Vector3.Distance(transform.position, CameraTransform[i].position);
 				if (Physics.Raycast(transform.position, _gazeDirection, rayDistance, DeviceLayerMask[i]))

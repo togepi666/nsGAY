@@ -16,6 +16,7 @@
         <e p="girlAI.cs" t="Include" />
         <e p="girlGaze.cs" t="Include" />
         <e p="IgnoreCollision.cs" t="Include" />
+        <e p="LineOfSightCollider.cs" t="Include" />
         <e p="LinkedSet.cs" t="Include" />
         <e p="menuScreen.cs" t="Include" />
         <e p="MeshResizing.cs" t="Include" />
