@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class FinalScore : MonoBehaviour {
     float score;
+    public Button b;
 
 	private GameObject generalStuff;
 	// Use this for initialization
@@ -16,10 +17,10 @@ public class FinalScore : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        b.onClick.AddListener(startGame);
         // score = GameObject.Find("timer").GetComponent<Timer>().timer;
         // GetComponent<Text>().text = "Time: " + score.ToString("#.00");
-        GetComponent<Text>().text = "Score: " + score;
+        GetComponent<Text>().text = score + " Threats";
 
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
@@ -28,4 +29,10 @@ public class FinalScore : MonoBehaviour {
 
 		}
 	}
+
+    public void startGame()
+    {
+        Debug.Log("Clicked button");
+        SceneManager.LoadScene(1);
+    }
 }
