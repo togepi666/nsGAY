@@ -1415,8 +1415,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8daade334e3ff547b9bc84c100efc94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCharacter: {fileID: 0}
+  mainCharacter: {fileID: 1646255835926336, guid: f61d27f1206c4a94a915c26be94abd66,
+    type: 2}
   explosion: {fileID: 0}
+  explosionV2: {fileID: 0}
+  hasPreTarget: 0
+  hasPreTarget3: 0
+  preTarget: {fileID: 0}
+  pretarget3: {fileID: 0}
   afterHit: {r: 0, g: 0, b: 0, a: 0}
   alive: 1
   speed: 5

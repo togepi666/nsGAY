@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Animations;
+//using UnityEditor.Animations;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -15,6 +15,7 @@ public class girlAI : MonoBehaviour
 	private float interval;
 
 	private int ranNum = 0;
+	private CameraSwitching _switch;
 	private Vector3 _previousPos;
 	private Vector3 _lastPos;
 
@@ -31,7 +32,8 @@ public class girlAI : MonoBehaviour
 		locations[2] = new Vector3(-7,0,-8);
 		locations[3] = new Vector3(18,0,-10);
 		locations[4] = new Vector3(-5,0,-27);
-		
+		_switch = GameObject.FindGameObjectWithTag("CameraController").GetComponent<CameraSwitching>();
+
 	}
 	
 	// Update is called once per frame
@@ -103,13 +105,13 @@ public class girlAI : MonoBehaviour
 					break;
 				case 5:// transform.position = Vector3.MoveTowards(transform.position, locations[4], .5f);
 					//GetComponent<Rigidbody>().AddForce(locations[4]-transform.position,ForceMode.Acceleration);
-					GetComponent<Rigidbody>().position = Vector3.MoveTowards(transform.position, locations[4], .05f);
+					transform.position = Vector3.MoveTowards(transform.position, locations[4], .05f);
 				//	transform.rotation = Quaternion.LookRotation(transform.position,locations[4]);
 					//transform.eulerAngles = Vector3.RotateTowards(transform.position, locations[4], .1f, .1f);
 					transform.LookAt(locations[4]);
 					transform.Rotate(new Vector3(0, -90, 0));
-
-					break;
+                    break;
+			
 		}
 
 		foreach (var targetLoc in locations)
@@ -143,15 +145,11 @@ public class girlAI : MonoBehaviour
 
 	void OnCollisionEnter(Collision turn)
 	{
-		if (turn.gameObject.CompareTag("Bullet"))
-		{
-			_animCont.SetBool("hitByBullet", true);
-		}
-
 		if (!turn.gameObject.CompareTag("floor") && !turn.gameObject.CompareTag("Bullet"))
 		{
 			if (_animCont.GetBool("hitByBullet"))
 			{
+				_animCont.SetBool("walking", false);
 				_animCont.SetBool("hitByBullet", false);
 			}
 		}
