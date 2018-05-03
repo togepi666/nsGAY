@@ -42,15 +42,15 @@ public class Shooting : MonoBehaviour {
                   //  Debug.Log(newBullet.GetComponent<Rigidbody>().velocity);
                     Debug.Log(speed);
 
-                    if (hit.collider.CompareTag("Enemy"))
+                  //  if (hit.collider.CompareTag("Enemy"))
                     {
                         // Code Emily wrote because Aaron wanted us to try:
                         //  hit.transform.gameObject.GetComponent<EnemyBehavior>().alive = false;
-                        if (hit.transform.gameObject.GetComponent<EnemyBehavior>().alive == true)
-                        {
-                            GameObject.Find("score").GetComponent<ScoringScript>().score++;
-                            Debug.Log("an enemy was hit, yo");
-                        }
+                    //    if (hit.transform.gameObject.GetComponent<EnemyBehavior>().alive == true)
+                      //  {
+                        //    GameObject.Find("score").GetComponent<ScoringScript>().score++;
+                          //  Debug.Log("an enemy was hit, yo");
+                       // }
                     }
                 }
         }

@@ -112,6 +112,7 @@ public class EnemyBehavior : MonoBehaviour
             if (alive)
             {
                 audio.PlayOneShot(ouch);
+                GameObject.Find("score").GetComponent<ScoringScript>().score++;
             }
 			Debug.Log("Should be dead.");
 			//Add code to change which particle effect to play. Currently too big for other alien.
@@ -128,9 +129,10 @@ public class EnemyBehavior : MonoBehaviour
 		
 			GetComponent<Rigidbody>().useGravity = true;
 			alive = false;
-			//GetComponent<ParticleSystem>().enableEmission = true;
+            
+            //GetComponent<ParticleSystem>().enableEmission = true;
 
-			mat.color = afterHit;
+            mat.color = afterHit;
 		}
 	}
     
