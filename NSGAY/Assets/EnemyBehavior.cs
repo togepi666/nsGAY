@@ -9,6 +9,10 @@ public class EnemyBehavior : MonoBehaviour
     // Use this for initialization
 	public GameObject explosion;
 	public GameObject explosionV2;
+	public bool hasPreTarget;
+	public bool hasPreTarget3;
+	public GameObject preTarget;
+	public GameObject pretarget3;
     Material mat;
 
     public Color afterHit;
@@ -26,6 +30,8 @@ public class EnemyBehavior : MonoBehaviour
 	// Use this for initialization
 	void Start () {
 
+		preTarget = GameObject.Find("PreTarget");
+		pretarget3 = GameObject.Find("PreTarget3");
 		mainCharacter = GameObject.Find("Girl");
 		speed = Random.RandomRange(.7f, 1.5f);
         mat = GetComponentInChildren<Renderer>().material;
@@ -36,6 +42,18 @@ public class EnemyBehavior : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+		if (hasPreTarget)
+		{
+			mainCharacter = preTarget;
+		}else if (hasPreTarget3)
+		{
+			mainCharacter = preTarget;
+		}
+		else
+		{
+			mainCharacter = GameObject.Find("Girl");
+		}
+		
         audio = GetComponent<AudioSource>();
 		if (alive)
 		{
@@ -77,6 +95,18 @@ public class EnemyBehavior : MonoBehaviour
 
 	private void OnCollisionEnter(Collision other)
 	{
+		if (other.gameObject.CompareTag("PreTarget"))
+		{
+			if (hasPreTarget)
+			{
+				hasPreTarget = false;
+			}
+
+			if (hasPreTarget3)
+			{
+				hasPreTarget3 = false;
+			}
+		}
 		if (other.gameObject.CompareTag("Bullet"))
 		{
             if (alive)
