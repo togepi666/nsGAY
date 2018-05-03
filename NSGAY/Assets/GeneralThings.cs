@@ -76,10 +76,14 @@ public class GeneralThings : MonoBehaviour {
 		{
 			case 1: GameObject newEnemy= Instantiate(enemies,spawnArea1.transform.position,Quaternion.identity,null) as GameObject;
 				newEnemy.GetComponent<EnemyBehavior>().speed += diff;
+				newEnemy.GetComponent<EnemyBehavior>().hasPreTarget3 = true;
+
 				//newEnemy.GetComponent<EnemyBehavior>().explosion = this.explosion;
 				break;
 			case 2: GameObject newEnemy2 =Instantiate(enemies,spawnArea2.transform.position,Quaternion.identity,null);
 				newEnemy2.GetComponent<EnemyBehavior>().speed += diff;
+				newEnemy2.GetComponent<EnemyBehavior>().hasPreTarget = true;
+
 			//	newEnemy2.GetComponent<EnemyBehavior>().explosion = this.explosion;
 
 				break;
@@ -99,12 +103,16 @@ public class GeneralThings : MonoBehaviour {
 			case 1: GameObject newEnemy= Instantiate(enemyType2,spawnArea1.transform.position,Quaternion.identity,null) as GameObject;
 				newEnemy.GetComponent<EnemyBehavior>().speed += diff;
 				newEnemy.GetComponent<EnemyBehavior>().movementType = behavior;
+				newEnemy.GetComponent<EnemyBehavior>().hasPreTarget3 = true;
+
 			//	newEnemy.GetComponent<EnemyBehavior>().explosion = this.explosion;
 
 				break;
 			case 2: GameObject newEnemy2 =Instantiate(enemyType2,spawnArea2.transform.position,Quaternion.identity,null);
 				newEnemy2.GetComponent<EnemyBehavior>().speed += diff;
 				newEnemy2.GetComponent<EnemyBehavior>().movementType = behavior;
+				newEnemy2.GetComponent<EnemyBehavior>().hasPreTarget = true;
+
 			//	newEnemy2.GetComponent<EnemyBehavior>().explosion = this.explosion;
 
 

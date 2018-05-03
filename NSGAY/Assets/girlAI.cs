@@ -47,7 +47,7 @@ public class girlAI : MonoBehaviour
 		//girlTurn = Random.Range(-180f, 180f);
 		//girlRotation = new Vector3(0f, girlTurn, 0f);
 		
-		if (interval > 2f)
+		if (interval > 3f)
 		{
 			ranNum = Random.Range(0, 6);
 	//		GetComponent<Rigidbody>().AddRelativeTorque(girlRotation *2, ForceMode.Force);
@@ -61,7 +61,7 @@ public class girlAI : MonoBehaviour
 				
 				case 1: //transform.position = Vector3.MoveTowards(transform.position, locations[0], .5f);
 					//	GetComponent<Rigidbody>().AddForce(locations[0]-transform.position,ForceMode.Acceleration);
-					transform.position= Vector3.MoveTowards(transform.position, locations[0], .15f);
+					transform.position= Vector3.MoveTowards(transform.position, locations[0], .1f);
 				//	transform.eulerAngles = Vector3.RotateTowards(transform.position, locations[0], .1f, .1f);
 					transform.LookAt(locations[0]);
 					transform.Rotate(new Vector3(0, -90, 0));
@@ -69,7 +69,7 @@ public class girlAI : MonoBehaviour
 					break;
 				case 2: //transform.position = Vector3.MoveTowards(transform.position, locations[1], .5f);
 					//GetComponent<Rigidbody>().AddForce(locations[1]-transform.position,ForceMode.Acceleration);
-					transform.position = Vector3.MoveTowards(transform.position, locations[1], .15f);
+					transform.position = Vector3.MoveTowards(transform.position, locations[1], .05f);
 				//	transform.rotation = Quaternion.LookRotation(transform.position,locations[1]);
 				//	transform.eulerAngles = Vector3.RotateTowards(transform.position, locations[1], .1f, .1f);
 					transform.LookAt(locations[1]);
@@ -81,7 +81,7 @@ public class girlAI : MonoBehaviour
 					break;
 				case 3: //transform.position = Vector3.MoveTowards(transform.position, locations[2], .5f);
 					//GetComponent<Rigidbody>().AddForce(locations[2]-transform.position,ForceMode.Acceleration);
-					transform.position = Vector3.MoveTowards(transform.position, locations[2], .15f);
+					transform.position = Vector3.MoveTowards(transform.position, locations[2], .1f);
 				//	transform.rotation = Quaternion.LookRotation(transform.position,locations[2]);
 					//transform.eulerAngles = Vector3.RotateTowards(transform.position, locations[2], .1f, .1f);
 					transform.LookAt(locations[2]);
@@ -92,7 +92,7 @@ public class girlAI : MonoBehaviour
 					break;
 				case 4: //transform.position = Vector3.MoveTowards(transform.position, locations[3], .5f);
 					//GetComponent<Rigidbody>().AddForce(locations[3]-transform.position,ForceMode.Acceleration);
-					transform.position = Vector3.MoveTowards(transform.position, locations[3], .15f);
+					transform.position = Vector3.MoveTowards(transform.position, locations[3], .05f);
 				//	transform.rotation = Quaternion.LookRotation(transform.position,locations[3]);
 					//transform.eulerAngles = Vector3.RotateTowards(transform.position, locations[3], .1f, .1f);
 					transform.LookAt(locations[3]);
@@ -103,7 +103,7 @@ public class girlAI : MonoBehaviour
 					break;
 				case 5:// transform.position = Vector3.MoveTowards(transform.position, locations[4], .5f);
 					//GetComponent<Rigidbody>().AddForce(locations[4]-transform.position,ForceMode.Acceleration);
-					GetComponent<Rigidbody>().position = Vector3.MoveTowards(transform.position, locations[4], .15f);
+					GetComponent<Rigidbody>().position = Vector3.MoveTowards(transform.position, locations[4], .05f);
 				//	transform.rotation = Quaternion.LookRotation(transform.position,locations[4]);
 					//transform.eulerAngles = Vector3.RotateTowards(transform.position, locations[4], .1f, .1f);
 					transform.LookAt(locations[4]);
@@ -161,7 +161,7 @@ public class girlAI : MonoBehaviour
 	{
 		//Vector3.Distance()
 		
-	    GetComponent<Rigidbody>().AddForce(Vector3.zero - transform.position);
+	 //   GetComponent<Rigidbody>().AddForce(Vector3.zero - transform.position);
 	}
 	}
 }

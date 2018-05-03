@@ -86,8 +86,9 @@ public class girlGaze : MonoBehaviour
 							Debug.DrawLine(bulletTran.position, transform.position, Color.yellow);
 							if (!_oneShot)
 							{
-								if (bulletTran.gameObject.GetComponent<BulletBehavior>().justShot == true)
+								if (bulletTran.gameObject.GetComponent<BulletBehavior>().justShot)
 								{
+									Debug.Log("GOt Seen");
 									gameObject.GetComponent<StrikeScript>().strikes--;
 									bulletTran.gameObject.GetComponent<BulletBehavior>().justShot = false;
 								}
