@@ -12,6 +12,6 @@ public class ScoringScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        GetComponent<Text>().text = "Score: " + score;
+        GetComponent<Text>().text = "Threats Eliminated: " + score;
     }
 }
