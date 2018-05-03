@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class StrikeScript : MonoBehaviour {
     public int strikes = 3;
     public bool gameOver = false;
+    public bool GirlHit;
     public GameObject strike1, strike2;
 
 	// Use this for initialization
@@ -42,6 +43,7 @@ public class StrikeScript : MonoBehaviour {
         {
             if (other.gameObject.GetComponent<EnemyBehavior>().alive)
             {
+                GirlHit = true;
                 strikes--;
                 other.gameObject.GetComponent<EnemyBehavior>().alive = false;
 
@@ -52,6 +54,7 @@ public class StrikeScript : MonoBehaviour {
         {
             if (!other.gameObject.GetComponent<BulletBehavior>().crashed)
             {
+                GirlHit = true;
                 strikes--;
                 other.gameObject.GetComponent<BulletBehavior>().crashed = true;
                 other.gameObject.GetComponent<BulletBehavior>().justShot = false;
