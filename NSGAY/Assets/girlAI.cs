@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 //using UnityEditor.Animations;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class girlAI : MonoBehaviour
 {
+	public Transform WebTest;
 	private Animator _animCont;
 	private bool _standUp;
 	private float girlTurn;
@@ -14,7 +16,7 @@ public class girlAI : MonoBehaviour
 	Vector3 girlRotation;
 	private float interval;
 
-	private int ranNum = 0;
+	public int ranNum = 0;
 	private CameraSwitching _switch;
 	private Vector3 _previousPos;
 	private Vector3 _lastPos;
@@ -87,6 +89,11 @@ public class girlAI : MonoBehaviour
 					transform.LookAt(locations[4]);
 					transform.Rotate(new Vector3(0, -90, 0));
                     break;
+				case 6:
+					transform.LookAt(GetComponent<girlGaze>().CameraTransform[_switch.CurrentMaterialIndex]);
+					transform.Rotate(new Vector3(0,-90,0));
+					//transform.rotation = Quaternion.Euler(0,-WebTest.rotation.y,0);
+					break;
 				
 			
 		}

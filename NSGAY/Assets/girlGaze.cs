@@ -6,7 +6,8 @@ public class girlGaze : MonoBehaviour
 {
 	public float GirlGazeRadius;
 	[Range(0, 360)] public float GirlGazeAngle;
-
+	public Transform MeshMover;
+	public Transform TransfomersMore;
 	public Transform[] CameraTransform = new Transform[3];
 
 
@@ -26,9 +27,9 @@ public class girlGaze : MonoBehaviour
 
 	void AdjustBounds()
 	{
-		_currentTransformRotation = transform.eulerAngles;
+		/*_currentTransformRotation = transform.eulerAngles;
 		_currentTransformRotation.y = Mathf.Clamp(_currentTransformRotation.y, 0, 360);
-		transform.rotation = Quaternion.Euler(_currentTransformRotation);
+		transform.rotation = Quaternion.Euler(_currentTransformRotation);*/
 		if (_camController.ComputerCamEnabled)
 		{
 			GirlGazeRadius = Mathf.Abs(CameraTransform[0].position.z - transform.position.z)
@@ -51,22 +52,19 @@ public class girlGaze : MonoBehaviour
 	private void Update()
 	{
 		AdjustBounds();
+		MeshMover.position = transform.position;
+		MeshMover.rotation = transform.rotation;
+	}
+
+	private void LateUpdate()
+	{
+    TransfomersMore.SetParent(MeshMover);
 	}
 
 	private void OnDrawGizmos()
 	{
 		Gizmos.color = Color.green;
 		Gizmos.DrawWireSphere(transform.position, GirlGazeRadius);
-	}
-
-
-	public Vector3 FindCurrentAngle(float gazeAngle,bool isAngleGlobal)
-	{
-		if (!isAngleGlobal)
-		{
-			gazeAngle += transform.eulerAngles.y;
-		}
-		return new Vector3(Mathf.Sin(gazeAngle*Mathf.Deg2Rad),0,Mathf.Cos(gazeAngle*Mathf.Deg2Rad));
 	}
 }
 

@@ -7,11 +7,11 @@ public class LineOfSightCollider : MonoBehaviour
 	public bool BulletEnteredLineOfSight;
 	private Animator _anihoemator;
 	private girlGaze _gassy;
-	private CameraSwitching _switch;
+	private girlAI _assy;
 	void Start ()
 	{
 		_gassy = transform.parent.gameObject.GetComponent<girlGaze>();
-		_switch = GameObject.FindGameObjectWithTag("CameraController").GetComponent<CameraSwitching>();
+		_assy = GameObject.FindGameObjectWithTag("Player").GetComponent<girlAI>();
 		_anihoemator = transform.parent.gameObject.GetComponent<Animator>();
 	}
 	
@@ -19,7 +19,7 @@ public class LineOfSightCollider : MonoBehaviour
 	{
 		if (other.gameObject.CompareTag("Bullet") && !BulletEnteredLineOfSight)
 		{
-			transform.parent.LookAt(_gassy.CameraTransform[_switch.CurrentMaterialIndex].position);
+			_assy.ranNum = 6;
 			_anihoemator.SetTrigger("SpottedPlayer");
 			_gassy.gameObject.GetComponent<StrikeScript>().strikes--;
 			BulletEnteredLineOfSight = true;
