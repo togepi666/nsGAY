@@ -13,6 +13,7 @@ TagManager:
   - Projector
   - EnemyDead
   - PreTarget
+  - LineOSight
   layers:
   - Default
   - TransparentFX

@@ -58,7 +58,7 @@ public class StrikeScript : MonoBehaviour {
 
         if (other.gameObject.CompareTag("Bullet"))
         {
-            if (!other.gameObject.GetComponent<BulletBehavior>().crashed && !_liney.BulletEnteredLineOfSight)
+            if (!other.gameObject.GetComponent<BulletBehavior>().crashed)
             {
                 _animControl.SetBool("hitByBullet", true);
                 //GirlHit = true;
@@ -67,21 +67,6 @@ public class StrikeScript : MonoBehaviour {
                 other.gameObject.GetComponent<BulletBehavior>().justShot = false;
                 Debug.Log("SET TO TRUE");
             }
-
-            if (!other.gameObject.GetComponent<BulletBehavior>().crashed && _liney.BulletEnteredLineOfSight)
-            {
-                other.gameObject.GetComponent<BulletBehavior>().crashed = true;
-                other.gameObject.GetComponent<BulletBehavior>().justShot = false;
-            }
         }
     }
-
-   /* private void OnCollisionExit(Collision other)
-    {
-        if(other.gameObject.CompareTag("Bullet") && _liney.BulletEnteredLineOfSight)
-        {
-            _liney.BulletEnteredLineOfSight = false;
-        }
-    }*/
-
 }

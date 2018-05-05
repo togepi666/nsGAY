@@ -2200,6 +2200,10 @@ Prefab:
       propertyPath: WebTest
       value: 
       objectReference: {fileID: 1585552385}
+    - target: {fileID: 1493096513959126, guid: f61d27f1206c4a94a915c26be94abd66, type: 2}
+      propertyPath: m_TagString
+      value: LineOSight
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f61d27f1206c4a94a915c26be94abd66, type: 2}
   m_IsPrefabParent: 0

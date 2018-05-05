@@ -45,7 +45,5 @@ public class BulletBehavior : MonoBehaviour
 		Debug.Log(other.gameObject.tag);
 		if(!other.gameObject.CompareTag("Player") && !other.gameObject.CompareTag("CameraLocation") && !other.gameObject.CompareTag("Bullet"))
 			crashed = true;
-
-		
 	}
 }

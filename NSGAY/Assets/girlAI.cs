@@ -143,7 +143,7 @@ public class girlAI : MonoBehaviour
 	{
 		//Vector3.Distance()
 		
-	 //   GetComponent<Rigidbody>().AddForce(Vector3.zero - transform.position);
+	    GetComponent<Rigidbody>().AddForce(Vector3.zero - transform.position);
 	}
 	}
 }

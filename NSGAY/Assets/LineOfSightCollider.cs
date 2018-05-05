@@ -23,17 +23,7 @@ public class LineOfSightCollider : MonoBehaviour
 			_anihoemator.SetTrigger("SpottedPlayer");
 			_gassy.gameObject.GetComponent<StrikeScript>().strikes--;
 			BulletEnteredLineOfSight = true;
-		}
-	}
-
-	private void OnTriggerExit(Collider other)
-	{
-		if (other.gameObject.CompareTag("Bullet"))
-		{
-			if (!other.gameObject.GetComponent<BulletBehavior>().justShot && BulletEnteredLineOfSight)
-			{
-				BulletEnteredLineOfSight = false;
-			}
+			Destroy(other.gameObject);
 		}
 	}
 }
