@@ -9,6 +9,7 @@ public class MeshResizing : MonoBehaviour
 	private Camera _projectCam;
 	private girlGaze _gaze;
 	private Projector _meshProjector;
+	private Vector3 _clampedAngles;
 	public Transform MeshCollider;
 	void Start ()
 	{
@@ -17,7 +18,6 @@ public class MeshResizing : MonoBehaviour
 		_meshProjector = GetComponentInChildren<Projector>();
 	}
 	
-	// Update is called once per frame
 	void Update ()
 	{
 		MeshCollider.transform.localScale =new Vector3(_gaze.GirlGazeRadius/5,MeshCollider.transform.localScale.y,_gaze.GirlGazeRadius/5);

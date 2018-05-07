@@ -1,56 +1,22 @@
 fileFormatVersion: 2
-guid: 6c04acfc8f34d844bb34dac95f627433
-timeCreated: 1524759269
+guid: 6a2c56513a8165145a6e481c0d345456
+timeCreated: 1525560244
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
-    100002: gravityField1
-    100004: gravityField2
-    100006: gravityField3
-    100008: gravityField4
-    100010: nRigid1
-    100012: nRigid2
-    100014: nucleus1
-    100016: pCube1
-    100018: pCube2
-    100020: pCube3
-    100022: pCube4
     400000: //RootNode
-    400002: gravityField1
-    400004: gravityField2
-    400006: gravityField3
-    400008: gravityField4
-    400010: nRigid1
-    400012: nRigid2
-    400014: nucleus1
-    400016: pCube1
-    400018: pCube2
-    400020: pCube3
-    400022: pCube4
-    2100000: mattressMaterial
-    2100002: bedMaterial
-    2100004: pillowMaterial
-    2100006: sheetMaterial
-    2300000: pCube1
-    2300002: pCube2
-    2300004: pCube3
-    2300006: pCube4
-    3300000: pCube1
-    3300002: pCube2
-    3300004: pCube3
-    3300006: pCube4
+    2100000: lambert1
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: pCube1
-    4300002: pCube2
-    4300004: pCube3
-    4300006: pCube4
     9500000: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: bedMaterial
+      name: lambert1
     second: {fileID: 2100000, guid: 3dda57426f93bd44e904bec1a8794beb, type: 2}
   materials:
     importMaterials: 1

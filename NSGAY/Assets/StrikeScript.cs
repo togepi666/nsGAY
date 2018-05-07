@@ -9,9 +9,15 @@ public class StrikeScript : MonoBehaviour {
     public bool GirlHit;
     public GameObject strike1, strike2;
 
+    private Animator _animControl;
+    private LineOfSightCollider _liney;
+
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+	{
+
+	    _liney = GetComponentInChildren<LineOfSightCollider>();
+	    _animControl = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -54,7 +60,8 @@ public class StrikeScript : MonoBehaviour {
         {
             if (!other.gameObject.GetComponent<BulletBehavior>().crashed)
             {
-                GirlHit = true;
+                _animControl.SetBool("hitByBullet", true);
+                //GirlHit = true;
                 strikes--;
                 other.gameObject.GetComponent<BulletBehavior>().crashed = true;
                 other.gameObject.GetComponent<BulletBehavior>().justShot = false;
@@ -62,5 +69,4 @@ public class StrikeScript : MonoBehaviour {
             }
         }
     }
-
 }
