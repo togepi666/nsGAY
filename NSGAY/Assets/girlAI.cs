@@ -13,7 +13,7 @@ public class girlAI : MonoBehaviour
 	Vector3 girlRotation;
 	private float interval;
 
-	private int ranNum = 0;
+	public int ranNum = 0;
 	private Vector3 _previousPos;
 	private Vector3 _lastPos;
 
@@ -62,7 +62,9 @@ public class girlAI : MonoBehaviour
 					//	GetComponent<Rigidbody>().AddForce(locations[0]-transform.position,ForceMode.Acceleration);
 					transform.position= Vector3.MoveTowards(transform.position, locations[0], .1f);
 				//	transform.eulerAngles = Vector3.RotateTowards(transform.position, locations[0], .1f, .1f);
-					transform.LookAt(locations[0]);
+					//transform.LookAt(locations[0]);
+					Vector3 dir = Vector3.RotateTowards(transform.position, locations[0], 1, 0f);
+					transform.rotation = Quaternion.LookRotation(dir);
 					transform.Rotate(new Vector3(0, -90, 0));
 
 					break;
@@ -71,7 +73,9 @@ public class girlAI : MonoBehaviour
 					transform.position = Vector3.MoveTowards(transform.position, locations[1], .05f);
 				//	transform.rotation = Quaternion.LookRotation(transform.position,locations[1]);
 				//	transform.eulerAngles = Vector3.RotateTowards(transform.position, locations[1], .1f, .1f);
-					transform.LookAt(locations[1]);
+					Vector3 dir1 = Vector3.RotateTowards(transform.position, locations[1], 1, 0f);
+					transform.rotation = Quaternion.LookRotation(dir1);
+					//transform.LookAt(locations[1]);
 					transform.Rotate(new Vector3(0, -90, 0));
 
 
@@ -83,7 +87,9 @@ public class girlAI : MonoBehaviour
 					transform.position = Vector3.MoveTowards(transform.position, locations[2], .1f);
 				//	transform.rotation = Quaternion.LookRotation(transform.position,locations[2]);
 					//transform.eulerAngles = Vector3.RotateTowards(transform.position, locations[2], .1f, .1f);
-					transform.LookAt(locations[2]);
+					//transform.LookAt(locations[2]);
+					Vector3 dir2 = Vector3.RotateTowards(transform.position, locations[2], 1, 0f);
+					transform.rotation = Quaternion.LookRotation(dir2);
 					transform.Rotate(new Vector3(0, -90, 0));
 
 
@@ -94,7 +100,9 @@ public class girlAI : MonoBehaviour
 					transform.position = Vector3.MoveTowards(transform.position, locations[3], .05f);
 				//	transform.rotation = Quaternion.LookRotation(transform.position,locations[3]);
 					//transform.eulerAngles = Vector3.RotateTowards(transform.position, locations[3], .1f, .1f);
-					transform.LookAt(locations[3]);
+					Vector3 dir3 = Vector3.RotateTowards(transform.position, locations[3], 1, 0f);
+					transform.rotation = Quaternion.LookRotation(dir3);
+					//transform.LookAt(locations[3]);
 					transform.Rotate(new Vector3(0, -90, 0));
 
 
@@ -102,10 +110,12 @@ public class girlAI : MonoBehaviour
 					break;
 				case 5:// transform.position = Vector3.MoveTowards(transform.position, locations[4], .5f);
 					//GetComponent<Rigidbody>().AddForce(locations[4]-transform.position,ForceMode.Acceleration);
-					GetComponent<Rigidbody>().position = Vector3.MoveTowards(transform.position, locations[4], .05f);
+					transform.position = Vector3.MoveTowards(transform.position, locations[4], .05f);
 				//	transform.rotation = Quaternion.LookRotation(transform.position,locations[4]);
 					//transform.eulerAngles = Vector3.RotateTowards(transform.position, locations[4], .1f, .1f);
-					transform.LookAt(locations[4]);
+					Vector3 dir4 = Vector3.RotateTowards(transform.position, locations[4], 1, 0f);
+					transform.rotation = Quaternion.LookRotation(dir4);
+					//transform.LookAt(locations[4]);
 					transform.Rotate(new Vector3(0, -90, 0));
 
 					break;
