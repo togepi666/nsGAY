@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33575082999939988}
   - component: {fileID: 23392854507311232}
   - component: {fileID: 95833183688504670}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: ufoEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 135157617000383568}
   - component: {fileID: 114248819644096224}
   - component: {fileID: 82206381308292766}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -250,7 +250,7 @@ MonoBehaviour:
   hasPreTarget: 0
   hasPreTarget3: 0
   preTarget: {fileID: 0}
-  pretarget3: {fileID: 0}
+  preTarget3: {fileID: 0}
   afterHit: {r: 0, g: 0, b: 0, a: 0}
   alive: 1
   speed: 5

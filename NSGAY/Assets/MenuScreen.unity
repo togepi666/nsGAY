@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.7399865, g: 0.5791805, b: 1.2241604, a: 1}
+  m_IndirectSpecularColor: {r: 0.52306324, g: 0.1294559, b: 0.28867066, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -472,7 +472,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "AS an agent of the NSA it is your duty to\nprotext your subject from all
+  m_Text: "AS an agent of the NSA it is your duty to\nprotect your subject from all
     harm. \nEliminate any and all threats.\n--------------------------------------------\nUse
     \"A\" and \"D\" or scroll to toggle between \ncameras\n\nClick to shoot\n\nDon't
     let your subject get hit and don't let \nthem see your bullets\n--------------------------------------------\nThank
