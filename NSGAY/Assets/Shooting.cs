@@ -37,15 +37,15 @@ public class Shooting : MonoBehaviour {
             audio.PlayOneShot(bang);
                 if (Physics.Raycast(ray, out hit, 400.0f))
                 {
-                Debug.DrawLine(ray.origin, hit.point, Color.red);
+               // Debug.DrawLine(ray.origin, hit.point, Color.red);
 
                 GameObject newBullet =
                     Instantiate(bullet, cameraObject.transform.position, cameraObject.transform.rotation) as GameObject;
                        bullet.transform.LookAt(hit.point);
                 newBullet.GetComponent<Rigidbody>().velocity = ((hit.point - cameraObject.transform.position).normalized)* speed;
-                    Debug.Log(newBullet.GetComponent<Rigidbody>().velocity);
+                    //Debug.Log(newBullet.GetComponent<Rigidbody>().velocity);
                   //  Debug.Log(newBullet.GetComponent<Rigidbody>().velocity);
-                    Debug.Log(speed);
+                  //  Debug.Log(speed);
 
                   //  if (hit.collider.CompareTag("Enemy"))
                     {

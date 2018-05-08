@@ -450,7 +450,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Congratulations, Agent.
 
-    You have elimated:'
+    You have eliminated:'
 --- !u!222 &1441136283
 CanvasRenderer:
   m_ObjectHideFlags: 0

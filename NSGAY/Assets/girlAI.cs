@@ -177,12 +177,5 @@ public class girlAI : MonoBehaviour
 			}
 		}
 	}
-	void OnCollisionStay(Collision other){
-	if(!other.gameObject.CompareTag("floor"))
-	{
-		//Vector3.Distance()
-		
-	 //   GetComponent<Rigidbody>().AddForce(Vector3.zero - transform.position);
-	}
-	}
+
 }
