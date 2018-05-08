@@ -12,7 +12,7 @@ public class EnemyBehavior : MonoBehaviour
 	public bool hasPreTarget;
 	public bool hasPreTarget3;
 	public GameObject preTarget;
-	public GameObject pretarget3;
+	public GameObject preTarget3;
     Material mat;
 
     public Color afterHit;
@@ -31,7 +31,7 @@ public class EnemyBehavior : MonoBehaviour
 	void Start () {
 
 		preTarget = GameObject.Find("PreTarget");
-		pretarget3 = GameObject.Find("PreTarget3");
+		preTarget3 = GameObject.Find("PreTarget3");
 		mainCharacter = GameObject.Find("Girl");
 		speed = Random.RandomRange(.7f, 1.5f);
         mat = GetComponentInChildren<Renderer>().material;
@@ -47,7 +47,7 @@ public class EnemyBehavior : MonoBehaviour
 			mainCharacter = preTarget;
 		}else if (hasPreTarget3)
 		{
-			mainCharacter = preTarget;
+			mainCharacter = preTarget3;
 		}
 		else
 		{
@@ -114,7 +114,7 @@ public class EnemyBehavior : MonoBehaviour
                 audio.PlayOneShot(ouch);
                 GameObject.Find("score").GetComponent<ScoringScript>().score++;
             }
-			Debug.Log("Should be dead.");
+		//	Debug.Log("Should be dead.");
 			//Add code to change which particle effect to play. Currently too big for other alien.
 			if (movementType == 0)
 			{
