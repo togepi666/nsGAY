@@ -141,12 +141,12 @@ public class girlAI : MonoBehaviour
 
 		//_lastPos = _previousPos;
 		GirlMovementAnim();
-		Debug.Log((transform.position-_previousPos).normalized);
+//		Debug.Log((transform.position-_previousPos).normalized);
 	}
 
 	void GirlMovementAnim()
 	{
-		Debug.Log(_animCont.GetBool("hitByBullet"));
+		//Debug.Log(_animCont.GetBool("hitByBullet"));
 		if ((transform.position-_previousPos).normalized != Vector3.zero)
 		{
 			_animCont.SetBool("walking",true);
